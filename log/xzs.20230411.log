@@ -1,0 +1,902 @@
+2023-04-11 18:07:44.906  INFO 396 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 396 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-11 18:07:44.909  INFO 396 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-11 18:07:45.002  INFO 396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-11 18:07:45.003  INFO 396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-11 18:07:46.764  WARN 396 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-11 18:07:46.792  INFO 396 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-11 18:07:46.792  INFO 396 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1789 ms
+2023-04-11 18:07:46.991  WARN 396 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is java.lang.RuntimeException: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfigurer.FormLoginWebSecurityConfigurerAdapter' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\SecurityConfigurer$FormLoginWebSecurityConfigurerAdapter.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restAuthenticationProvider' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\RestAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+2023-04-11 18:07:46.999  INFO 396 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 18:07:47.009 ERROR 396 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is java.lang.RuntimeException: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfigurer.FormLoginWebSecurityConfigurerAdapter' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\SecurityConfigurer$FormLoginWebSecurityConfigurerAdapter.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restAuthenticationProvider' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\RestAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:155)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.rachel.service.ServiceApplication.main(ServiceApplication.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.RuntimeException: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfigurer.FormLoginWebSecurityConfigurerAdapter' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\SecurityConfigurer$FormLoginWebSecurityConfigurerAdapter.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restAuthenticationProvider' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\RestAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at io.undertow.servlet.core.DeploymentManagerImpl.deploy(DeploymentManagerImpl.java:252)
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServerFactory.createDeploymentManager(UndertowServletWebServerFactory.java:279)
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServerFactory.getWebServer(UndertowServletWebServerFactory.java:206)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:179)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:152)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfigurer.FormLoginWebSecurityConfigurerAdapter' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\SecurityConfigurer$FormLoginWebSecurityConfigurerAdapter.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restAuthenticationProvider' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\RestAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:392)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:252)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:226)
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServerFactory$Initializer.onStartup(UndertowServletWebServerFactory.java:592)
+	at io.undertow.servlet.core.DeploymentManagerImpl$1.call(DeploymentManagerImpl.java:203)
+	at io.undertow.servlet.core.DeploymentManagerImpl$1.call(DeploymentManagerImpl.java:185)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:42)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.core.DeploymentManagerImpl.deploy(DeploymentManagerImpl.java:250)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restAuthenticationProvider' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\RestAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 62 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 76 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1515)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 90 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1500)
+	... 102 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 115 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:596)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:616)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$8c7d7d73.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$8c7d7d73$$FastClassBySpringCGLIB$$60ac284f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$8c7d7d73.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 116 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:260)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:126)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:80)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:593)
+	... 129 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 必须为元素类型 "insert" 声明属性 "returnType"。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.addDTDDefaultAttrsAndValidate(XMLDTDValidator.java:1255)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.handleStartElement(XMLDTDValidator.java:1919)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:744)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1361)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2786)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:507)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:867)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:796)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:142)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:258)
+	... 132 common frames omitted
+
+2023-04-11 18:16:06.723  INFO 12176 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 12176 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-11 18:16:06.725  INFO 12176 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-11 18:16:06.769  INFO 12176 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-11 18:16:06.769  INFO 12176 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-11 18:16:08.218  WARN 12176 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-11 18:16:08.238  INFO 12176 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-11 18:16:08.239  INFO 12176 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1469 ms
+2023-04-11 18:16:09.266  INFO 12176 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e44270e, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d8f5b6, org.springframework.security.web.header.HeaderWriterFilter@4834e8ae, org.springframework.web.filter.CorsFilter@57b1a7c8, org.springframework.security.web.authentication.logout.LogoutFilter@1d56c2e1, com.rachel.service.configuration.spring.security.RestLoginAuthenticationFilter@5bc69470, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5763ad0e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52f4a149, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69b2101b, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@525b11e7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@231909f1, org.springframework.security.web.session.SessionManagementFilter@5d328430, org.springframework.security.web.access.ExceptionTranslationFilter@1a5e542c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64fb5c68]
+2023-04-11 18:16:09.804  INFO 12176 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-11 18:16:09.868  INFO 12176 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-04-11 18:16:09.880  INFO 12176 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-04-11 18:16:09.946  INFO 12176 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-04-11 18:16:09.949  INFO 12176 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 3.769 seconds (JVM running for 4.84)
+2023-04-11 18:18:51.018  INFO 6076 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 6076 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-11 18:18:51.020  INFO 6076 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-11 18:18:51.092  INFO 6076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-11 18:18:51.092  INFO 6076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-11 18:18:52.673  WARN 6076 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-11 18:18:52.693  INFO 6076 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-11 18:18:52.693  INFO 6076 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1601 ms
+2023-04-11 18:18:52.859  WARN 6076 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is java.lang.RuntimeException: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfigurer.FormLoginWebSecurityConfigurerAdapter' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\SecurityConfigurer$FormLoginWebSecurityConfigurerAdapter.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restAuthenticationProvider' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\RestAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+2023-04-11 18:18:52.867  INFO 6076 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 18:18:52.877 ERROR 6076 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is java.lang.RuntimeException: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfigurer.FormLoginWebSecurityConfigurerAdapter' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\SecurityConfigurer$FormLoginWebSecurityConfigurerAdapter.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restAuthenticationProvider' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\RestAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:155)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.rachel.service.ServiceApplication.main(ServiceApplication.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.RuntimeException: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfigurer.FormLoginWebSecurityConfigurerAdapter' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\SecurityConfigurer$FormLoginWebSecurityConfigurerAdapter.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restAuthenticationProvider' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\RestAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at io.undertow.servlet.core.DeploymentManagerImpl.deploy(DeploymentManagerImpl.java:252)
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServerFactory.createDeploymentManager(UndertowServletWebServerFactory.java:279)
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServerFactory.getWebServer(UndertowServletWebServerFactory.java:206)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:179)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:152)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfigurer.FormLoginWebSecurityConfigurerAdapter' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\SecurityConfigurer$FormLoginWebSecurityConfigurerAdapter.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restAuthenticationProvider' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\RestAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:392)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:252)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:226)
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServerFactory$Initializer.onStartup(UndertowServletWebServerFactory.java:592)
+	at io.undertow.servlet.core.DeploymentManagerImpl$1.call(DeploymentManagerImpl.java:203)
+	at io.undertow.servlet.core.DeploymentManagerImpl$1.call(DeploymentManagerImpl.java:185)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:42)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.core.DeploymentManagerImpl.deploy(DeploymentManagerImpl.java:250)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restAuthenticationProvider' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\RestAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 62 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 76 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1515)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 90 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1500)
+	... 102 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 115 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:596)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:616)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1a0a3b4f.CGLIB$sqlSessionFactory$0(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1a0a3b4f$$FastClassBySpringCGLIB$$13996bb0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1a0a3b4f.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 116 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 7; columnNumber: 100; 必须为元素类型 "insert" 声明属性 "returnType"。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:260)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:126)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:80)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:593)
+	... 129 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 必须为元素类型 "insert" 声明属性 "returnType"。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.addDTDDefaultAttrsAndValidate(XMLDTDValidator.java:1255)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.handleStartElement(XMLDTDValidator.java:1919)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:744)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1361)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2786)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:507)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:867)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:796)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:142)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:258)
+	... 132 common frames omitted
+
+2023-04-11 18:22:33.221  INFO 13012 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 13012 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-11 18:22:33.224  INFO 13012 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-11 18:22:33.307  INFO 13012 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-11 18:22:33.307  INFO 13012 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-11 18:22:35.006  WARN 13012 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-11 18:22:35.029  INFO 13012 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-11 18:22:35.030  INFO 13012 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1722 ms
+2023-04-11 18:22:35.216  WARN 13012 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is java.lang.RuntimeException: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfigurer.FormLoginWebSecurityConfigurerAdapter' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\SecurityConfigurer$FormLoginWebSecurityConfigurerAdapter.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restAuthenticationProvider' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\RestAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving JdbcType. Cause: java.lang.IllegalArgumentException: No enum constant org.apache.ibatis.type.JdbcType.Integer
+2023-04-11 18:22:35.228  INFO 13012 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-11 18:22:35.241 ERROR 13012 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is java.lang.RuntimeException: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfigurer.FormLoginWebSecurityConfigurerAdapter' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\SecurityConfigurer$FormLoginWebSecurityConfigurerAdapter.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restAuthenticationProvider' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\RestAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving JdbcType. Cause: java.lang.IllegalArgumentException: No enum constant org.apache.ibatis.type.JdbcType.Integer
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:155)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.rachel.service.ServiceApplication.main(ServiceApplication.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.RuntimeException: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfigurer.FormLoginWebSecurityConfigurerAdapter' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\SecurityConfigurer$FormLoginWebSecurityConfigurerAdapter.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restAuthenticationProvider' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\RestAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving JdbcType. Cause: java.lang.IllegalArgumentException: No enum constant org.apache.ibatis.type.JdbcType.Integer
+	at io.undertow.servlet.core.DeploymentManagerImpl.deploy(DeploymentManagerImpl.java:252)
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServerFactory.createDeploymentManager(UndertowServletWebServerFactory.java:279)
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServerFactory.getWebServer(UndertowServletWebServerFactory.java:206)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:179)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:152)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfigurer.FormLoginWebSecurityConfigurerAdapter' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\SecurityConfigurer$FormLoginWebSecurityConfigurerAdapter.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restAuthenticationProvider' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\RestAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving JdbcType. Cause: java.lang.IllegalArgumentException: No enum constant org.apache.ibatis.type.JdbcType.Integer
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:392)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:252)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:226)
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServerFactory$Initializer.onStartup(UndertowServletWebServerFactory.java:592)
+	at io.undertow.servlet.core.DeploymentManagerImpl$1.call(DeploymentManagerImpl.java:203)
+	at io.undertow.servlet.core.DeploymentManagerImpl$1.call(DeploymentManagerImpl.java:185)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:42)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.core.DeploymentManagerImpl.deploy(DeploymentManagerImpl.java:250)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restAuthenticationProvider' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\configuration\spring\security\RestAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving JdbcType. Cause: java.lang.IllegalArgumentException: No enum constant org.apache.ibatis.type.JdbcType.Integer
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenticationServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\AuthenticationServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving JdbcType. Cause: java.lang.IllegalArgumentException: No enum constant org.apache.ibatis.type.JdbcType.Integer
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 62 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving JdbcType. Cause: java.lang.IllegalArgumentException: No enum constant org.apache.ibatis.type.JdbcType.Integer
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 76 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\com\rachel\service\repository\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving JdbcType. Cause: java.lang.IllegalArgumentException: No enum constant org.apache.ibatis.type.JdbcType.Integer
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1515)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 90 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving JdbcType. Cause: java.lang.IllegalArgumentException: No enum constant org.apache.ibatis.type.JdbcType.Integer
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1500)
+	... 102 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving JdbcType. Cause: java.lang.IllegalArgumentException: No enum constant org.apache.ibatis.type.JdbcType.Integer
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 115 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving JdbcType. Cause: java.lang.IllegalArgumentException: No enum constant org.apache.ibatis.type.JdbcType.Integer
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:596)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:616)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5db2a2d2.CGLIB$sqlSessionFactory$0(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5db2a2d2$$FastClassBySpringCGLIB$$a4a109cc.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5db2a2d2.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 116 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving JdbcType. Cause: java.lang.IllegalArgumentException: No enum constant org.apache.ibatis.type.JdbcType.Integer
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:594)
+	... 129 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving JdbcType. Cause: java.lang.IllegalArgumentException: No enum constant org.apache.ibatis.type.JdbcType.Integer
+	at org.apache.ibatis.builder.BaseBuilder.resolveJdbcType(BaseBuilder.java:73)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildResultMappingFromContext(XMLMapperBuilder.java:392)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:280)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:253)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:245)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118)
+	... 131 common frames omitted
+Caused by: java.lang.IllegalArgumentException: No enum constant org.apache.ibatis.type.JdbcType.Integer
+	at java.lang.Enum.valueOf(Enum.java:238)
+	at org.apache.ibatis.type.JdbcType.valueOf(JdbcType.java:25)
+	at org.apache.ibatis.builder.BaseBuilder.resolveJdbcType(BaseBuilder.java:71)
+	... 136 common frames omitted
+
+2023-04-11 18:54:48.318  INFO 4604 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 4604 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-11 18:54:48.321  INFO 4604 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-11 18:54:48.393  INFO 4604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-11 18:54:48.394  INFO 4604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-11 18:54:49.996  WARN 4604 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-11 18:54:50.018  INFO 4604 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-11 18:54:50.019  INFO 4604 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1625 ms
+2023-04-11 18:54:51.023  INFO 4604 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67a0ae21, org.springframework.security.web.context.SecurityContextPersistenceFilter@1beb11a7, org.springframework.security.web.header.HeaderWriterFilter@2500e126, org.springframework.web.filter.CorsFilter@2476d4b, org.springframework.security.web.authentication.logout.LogoutFilter@5e1f6741, com.rachel.service.configuration.spring.security.RestLoginAuthenticationFilter@31ef4c4f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6674f4c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@184bad93, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56e66132, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@3e3ca6b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13cd7dd7, org.springframework.security.web.session.SessionManagementFilter@3365bc2a, org.springframework.security.web.access.ExceptionTranslationFilter@6caa92b9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ed02df2]
+2023-04-11 18:54:51.599  INFO 4604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-11 18:54:51.651  INFO 4604 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-04-11 18:54:51.661  INFO 4604 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-04-11 18:54:51.722  INFO 4604 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-04-11 18:54:51.726  INFO 4604 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 3.991 seconds (JVM running for 5.347)
+2023-04-11 18:55:32.078  INFO 4604 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-11 18:55:32.078  INFO 4604 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-11 18:55:32.085  INFO 4604 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-04-11 18:57:48.199  INFO 4604 --- [XNIO-1 task-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 18:57:48.331  INFO 4604 --- [XNIO-1 task-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 18:57:48.338 DEBUG 4604 --- [XNIO-1 task-46] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-11 18:57:48.360 DEBUG 4604 --- [XNIO-1 task-46] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin (String)
+2023-04-11 18:57:48.382 DEBUG 4604 --- [XNIO-1 task-46] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-11 18:57:48.828 DEBUG 4604 --- [XNIO-1 task-46] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-11 18:57:48.828 DEBUG 4604 --- [XNIO-1 task-46] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-11 18:57:48.829 DEBUG 4604 --- [XNIO-1 task-46] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-11 18:57:48.842 DEBUG 4604 --- [XNIO-1 task-46] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-11 18:57:48.845 DEBUG 4604 --- [XNIO-1 task-46] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-11 18:57:48.829(Timestamp)
+2023-04-11 18:57:48.853 DEBUG 4604 --- [XNIO-1 task-46] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-11 18:57:54.875 DEBUG 4604 --- [XNIO-1 task-51] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-11 18:57:54.875 DEBUG 4604 --- [XNIO-1 task-51] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin (String)
+2023-04-11 18:57:54.877 DEBUG 4604 --- [XNIO-1 task-51] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-11 18:57:54.880 DEBUG 4604 --- [XNIO-1 task-51] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-11 18:57:54.880 DEBUG 4604 --- [XNIO-1 task-51] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-11 18:57:54.882 DEBUG 4604 --- [XNIO-1 task-51] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-11 18:57:54.883 DEBUG 4604 --- [XNIO-1 task-51] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-11 18:57:54.884 DEBUG 4604 --- [XNIO-1 task-51] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-11 18:57:54.882(Timestamp)
+2023-04-11 18:57:54.889 DEBUG 4604 --- [XNIO-1 task-51] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-11 18:58:17.598 DEBUG 4604 --- [XNIO-1 task-56] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-11 18:58:17.599 DEBUG 4604 --- [XNIO-1 task-56] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-11 18:58:17.600 DEBUG 4604 --- [XNIO-1 task-56] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-11 18:58:17.604 DEBUG 4604 --- [XNIO-1 task-56] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-11 18:58:17.605 DEBUG 4604 --- [XNIO-1 task-56] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-11 18:58:17.606 DEBUG 4604 --- [XNIO-1 task-56] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-11 18:58:17.607 DEBUG 4604 --- [XNIO-1 task-56] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-11 18:58:17.608 DEBUG 4604 --- [XNIO-1 task-56] r.c.r.s.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 登录了学之思开源考试系统(String), 2023-04-11 18:58:17.607(Timestamp)
+2023-04-11 18:58:17.614 DEBUG 4604 --- [XNIO-1 task-56] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-11 18:58:17.707 DEBUG 4604 --- [XNIO-1 task-57] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-11 18:58:17.708 DEBUG 4604 --- [XNIO-1 task-57] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-11 18:58:17.709 DEBUG 4604 --- [XNIO-1 task-57] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-11 18:58:17.710 DEBUG 4604 --- [XNIO-1 task-57] r.c.r.s.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2023-04-11 18:58:17.710 DEBUG 4604 --- [XNIO-1 task-57] r.c.r.s.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2023-04-11 18:58:17.713 DEBUG 4604 --- [XNIO-1 task-58] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-11 18:58:17.713 DEBUG 4604 --- [XNIO-1 task-58] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-11 18:58:17.715 DEBUG 4604 --- [XNIO-1 task-57] r.c.r.s.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2023-04-11 18:58:17.716 DEBUG 4604 --- [XNIO-1 task-58] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-11 18:58:17.718 DEBUG 4604 --- [XNIO-1 task-60] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-11 18:58:17.719 DEBUG 4604 --- [XNIO-1 task-60] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-11 18:58:17.720 DEBUG 4604 --- [XNIO-1 task-59] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-11 18:58:17.720 DEBUG 4604 --- [XNIO-1 task-59] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-11 18:58:17.721 DEBUG 4604 --- [XNIO-1 task-60] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-11 18:58:17.723 DEBUG 4604 --- [XNIO-1 task-59] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-11 18:58:17.725 DEBUG 4604 --- [XNIO-1 task-60] r.c.r.s.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2023-04-11 18:58:17.725 DEBUG 4604 --- [XNIO-1 task-60] r.c.r.s.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2023-04-11 18:58:17.727 DEBUG 4604 --- [XNIO-1 task-60] r.c.r.s.r.T.getByGradeLevel              : <==      Total: 0
+2023-04-11 18:58:17.729 DEBUG 4604 --- [XNIO-1 task-59] r.c.r.s.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2023-04-11 18:58:17.730 DEBUG 4604 --- [XNIO-1 task-59] r.c.r.s.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2023-04-11 18:58:17.733 DEBUG 4604 --- [XNIO-1 task-59] r.c.r.s.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2023-04-11 18:58:17.737 DEBUG 4604 --- [XNIO-1 task-59] r.c.r.s.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2023-04-11 18:58:17.740 DEBUG 4604 --- [XNIO-1 task-59] r.c.r.s.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2023-04-11 18:58:17.736(Timestamp)
+2023-04-11 18:58:17.742 DEBUG 4604 --- [XNIO-1 task-59] r.c.r.s.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2023-04-11 18:58:27.590 DEBUG 4604 --- [XNIO-1 task-120] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-11 18:58:27.590 DEBUG 4604 --- [XNIO-1 task-120] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin (String)
+2023-04-11 18:58:27.592 DEBUG 4604 --- [XNIO-1 task-120] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-11 18:58:27.594 DEBUG 4604 --- [XNIO-1 task-120] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-11 18:58:27.595 DEBUG 4604 --- [XNIO-1 task-120] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-11 18:58:27.596 DEBUG 4604 --- [XNIO-1 task-120] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-11 18:58:27.597 DEBUG 4604 --- [XNIO-1 task-120] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-11 18:58:27.598 DEBUG 4604 --- [XNIO-1 task-120] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-11 18:58:27.597(Timestamp)
+2023-04-11 18:58:27.603 DEBUG 4604 --- [XNIO-1 task-120] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-11 18:58:27.730 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2023-04-11 18:58:27.731 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.E.selectAllCount               : ==> Parameters: 
+2023-04-11 18:58:27.732 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.E.selectAllCount               : <==      Total: 1
+2023-04-11 18:58:27.732 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2023-04-11 18:58:27.732 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2023-04-11 18:58:27.734 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2023-04-11 18:58:27.735 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2023-04-11 18:58:27.735 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.E.selectAllCount               : ==> Parameters: 
+2023-04-11 18:58:27.739 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.E.selectAllCount               : <==      Total: 1
+2023-04-11 18:58:27.740 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2023-04-11 18:58:27.740 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.E.selectAllCount               : ==> Parameters: 
+2023-04-11 18:58:27.742 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.E.selectAllCount               : <==      Total: 1
+2023-04-11 18:58:27.745 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2023-04-11 18:58:27.745 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.U.selectCountByDate            : ==> Parameters: 2023-04-01 00:00:00.0(Timestamp), 2023-04-30 23:59:59.0(Timestamp)
+2023-04-11 18:58:27.751 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.U.selectCountByDate            : <==      Total: 3
+2023-04-11 18:58:27.754 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2023-04-11 18:58:27.755 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.E.selectCountByDate            : ==> Parameters: 2023-04-01 00:00:00.0(Timestamp), 2023-04-30 23:59:59.0(Timestamp)
+2023-04-11 18:58:27.756 DEBUG 4604 --- [XNIO-1 task-121] r.c.r.s.r.E.selectCountByDate            : <==      Total: 0
+2023-04-11 18:59:04.162 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2023-04-11 18:59:04.163 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.E.selectAllCount               : ==> Parameters: 
+2023-04-11 18:59:04.164 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.E.selectAllCount               : <==      Total: 1
+2023-04-11 18:59:04.165 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2023-04-11 18:59:04.166 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2023-04-11 18:59:04.168 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2023-04-11 18:59:04.168 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2023-04-11 18:59:04.169 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.E.selectAllCount               : ==> Parameters: 
+2023-04-11 18:59:04.172 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.E.selectAllCount               : <==      Total: 1
+2023-04-11 18:59:04.173 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2023-04-11 18:59:04.173 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.E.selectAllCount               : ==> Parameters: 
+2023-04-11 18:59:04.176 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.E.selectAllCount               : <==      Total: 1
+2023-04-11 18:59:04.177 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2023-04-11 18:59:04.178 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.U.selectCountByDate            : ==> Parameters: 2023-04-01 00:00:00.0(Timestamp), 2023-04-30 23:59:59.0(Timestamp)
+2023-04-11 18:59:04.180 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.U.selectCountByDate            : <==      Total: 3
+2023-04-11 18:59:04.181 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2023-04-11 18:59:04.182 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.E.selectCountByDate            : ==> Parameters: 2023-04-01 00:00:00.0(Timestamp), 2023-04-30 23:59:59.0(Timestamp)
+2023-04-11 18:59:04.183 DEBUG 4604 --- [XNIO-1 task-125] r.c.r.s.r.E.selectCountByDate            : <==      Total: 0
+2023-04-11 18:59:08.467 DEBUG 4604 --- [XNIO-1 task-126] r.c.r.s.r.UserMapper.userPage_COUNT      : ==>  Preparing: SELECT count(0) FROM t_user WHERE deleted = 0 AND role = ? 
+2023-04-11 18:59:08.468 DEBUG 4604 --- [XNIO-1 task-126] r.c.r.s.r.UserMapper.userPage_COUNT      : ==> Parameters: 1(Integer)
+2023-04-11 18:59:08.469 DEBUG 4604 --- [XNIO-1 task-126] r.c.r.s.r.UserMapper.userPage_COUNT      : <==      Total: 1
+2023-04-11 18:59:08.473 DEBUG 4604 --- [XNIO-1 task-126] r.c.r.s.repository.UserMapper.userPage   : ==>  Preparing: SELECT id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id FROM t_user WHERE deleted = 0 AND role = ? order by id desc LIMIT ? 
+2023-04-11 18:59:08.473 DEBUG 4604 --- [XNIO-1 task-126] r.c.r.s.repository.UserMapper.userPage   : ==> Parameters: 1(Integer), 10(Integer)
+2023-04-11 18:59:08.475 DEBUG 4604 --- [XNIO-1 task-126] r.c.r.s.repository.UserMapper.userPage   : <==      Total: 2
+2023-04-11 18:59:10.729 DEBUG 4604 --- [XNIO-1 task-127] r.c.r.s.r.UserMapper.userPage_COUNT      : ==>  Preparing: SELECT count(0) FROM t_user WHERE deleted = 0 AND role = ? 
+2023-04-11 18:59:10.729 DEBUG 4604 --- [XNIO-1 task-127] r.c.r.s.r.UserMapper.userPage_COUNT      : ==> Parameters: 3(Integer)
+2023-04-11 18:59:10.731 DEBUG 4604 --- [XNIO-1 task-127] r.c.r.s.r.UserMapper.userPage_COUNT      : <==      Total: 1
+2023-04-11 18:59:10.732 DEBUG 4604 --- [XNIO-1 task-127] r.c.r.s.repository.UserMapper.userPage   : ==>  Preparing: SELECT id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id FROM t_user WHERE deleted = 0 AND role = ? order by id desc LIMIT ? 
+2023-04-11 18:59:10.732 DEBUG 4604 --- [XNIO-1 task-127] r.c.r.s.repository.UserMapper.userPage   : ==> Parameters: 3(Integer), 10(Integer)
+2023-04-11 18:59:10.734 DEBUG 4604 --- [XNIO-1 task-127] r.c.r.s.repository.UserMapper.userPage   : <==      Total: 1
+2023-04-11 19:06:16.579 DEBUG 4604 --- [XNIO-1 task-134] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-11 19:06:16.579 DEBUG 4604 --- [XNIO-1 task-134] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin (String)
+2023-04-11 19:06:16.584 DEBUG 4604 --- [XNIO-1 task-134] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-11 19:06:16.589 DEBUG 4604 --- [XNIO-1 task-134] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-11 19:06:16.589 DEBUG 4604 --- [XNIO-1 task-134] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-11 19:06:16.590 DEBUG 4604 --- [XNIO-1 task-134] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-11 19:06:16.591 DEBUG 4604 --- [XNIO-1 task-134] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-11 19:06:16.592 DEBUG 4604 --- [XNIO-1 task-134] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-11 19:06:16.591(Timestamp)
+2023-04-11 19:06:16.603 DEBUG 4604 --- [XNIO-1 task-134] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-11 19:06:16.758 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2023-04-11 19:06:16.758 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.E.selectAllCount               : ==> Parameters: 
+2023-04-11 19:06:16.760 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.E.selectAllCount               : <==      Total: 1
+2023-04-11 19:06:16.761 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2023-04-11 19:06:16.761 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2023-04-11 19:06:16.761 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2023-04-11 19:06:16.762 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2023-04-11 19:06:16.762 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.E.selectAllCount               : ==> Parameters: 
+2023-04-11 19:06:16.764 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.E.selectAllCount               : <==      Total: 1
+2023-04-11 19:06:16.764 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2023-04-11 19:06:16.765 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.E.selectAllCount               : ==> Parameters: 
+2023-04-11 19:06:16.766 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.E.selectAllCount               : <==      Total: 1
+2023-04-11 19:06:16.767 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2023-04-11 19:06:16.768 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.U.selectCountByDate            : ==> Parameters: 2023-04-01 00:00:00.0(Timestamp), 2023-04-30 23:59:59.0(Timestamp)
+2023-04-11 19:06:16.771 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.U.selectCountByDate            : <==      Total: 3
+2023-04-11 19:06:16.774 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2023-04-11 19:06:16.774 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.E.selectCountByDate            : ==> Parameters: 2023-04-01 00:00:00.0(Timestamp), 2023-04-30 23:59:59.0(Timestamp)
+2023-04-11 19:06:16.775 DEBUG 4604 --- [XNIO-1 task-135] r.c.r.s.r.E.selectCountByDate            : <==      Total: 0
+2023-04-11 19:07:29.632 ERROR 4604 --- [XNIO-1 task-139] c.r.s.c.s.exception.ExceptionHandle      : Request method 'GET' not supported
+
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:200)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:419)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:365)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:65)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:401)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1232)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1015)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+2023-04-11 19:11:43.314  INFO 4604 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 19:11:43.324  INFO 4604 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 19:11:43.326  INFO 4604 --- [Thread-15] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-11 19:12:05.980  INFO 12308 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 12308 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-11 19:12:05.982  INFO 12308 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-11 19:12:06.033  INFO 12308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-11 19:12:06.033  INFO 12308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-11 19:12:07.811  WARN 12308 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-11 19:12:07.835  INFO 12308 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-11 19:12:07.835  INFO 12308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1802 ms
+2023-04-11 19:12:08.964  INFO 12308 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a27c6be, org.springframework.security.web.context.SecurityContextPersistenceFilter@3a107419, org.springframework.security.web.header.HeaderWriterFilter@7f69ae59, org.springframework.web.filter.CorsFilter@3536097a, org.springframework.security.web.authentication.logout.LogoutFilter@6d6e0e36, com.rachel.service.configuration.spring.security.RestLoginAuthenticationFilter@270d7111, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3c2f29d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f017491, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9e691c5, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@737c9aa9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e6aec30, org.springframework.security.web.session.SessionManagementFilter@12ece2a0, org.springframework.security.web.access.ExceptionTranslationFilter@69c4014b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@15953b97]
+2023-04-11 19:12:09.568  INFO 12308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-11 19:12:09.645  INFO 12308 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-04-11 19:12:09.657  INFO 12308 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-04-11 19:12:09.723  INFO 12308 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-04-11 19:12:09.727  INFO 12308 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 4.402 seconds (JVM running for 5.792)
+2023-04-11 19:12:09.784  INFO 12308 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-11 19:12:09.784  INFO 12308 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-11 19:12:09.792  INFO 12308 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-04-11 19:12:22.446  INFO 12308 --- [XNIO-1 task-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-11 19:12:22.635  INFO 12308 --- [XNIO-1 task-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-11 19:12:22.647 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2023-04-11 19:12:22.675 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.E.selectAllCount               : ==> Parameters: 
+2023-04-11 19:12:22.698 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.E.selectAllCount               : <==      Total: 1
+2023-04-11 19:12:22.702 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2023-04-11 19:12:22.702 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2023-04-11 19:12:22.704 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2023-04-11 19:12:22.706 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2023-04-11 19:12:22.707 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.E.selectAllCount               : ==> Parameters: 
+2023-04-11 19:12:22.709 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.E.selectAllCount               : <==      Total: 1
+2023-04-11 19:12:22.709 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2023-04-11 19:12:22.710 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.E.selectAllCount               : ==> Parameters: 
+2023-04-11 19:12:22.711 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.E.selectAllCount               : <==      Total: 1
+2023-04-11 19:12:22.716 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2023-04-11 19:12:22.720 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.U.selectCountByDate            : ==> Parameters: 2023-04-01 00:00:00.0(Timestamp), 2023-04-30 23:59:59.0(Timestamp)
+2023-04-11 19:12:22.723 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.U.selectCountByDate            : <==      Total: 3
+2023-04-11 19:12:22.727 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2023-04-11 19:12:22.727 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.E.selectCountByDate            : ==> Parameters: 2023-04-01 00:00:00.0(Timestamp), 2023-04-30 23:59:59.0(Timestamp)
+2023-04-11 19:12:22.728 DEBUG 12308 --- [XNIO-1 task-13] r.c.r.s.r.E.selectCountByDate            : <==      Total: 0
+2023-04-11 19:12:29.046 DEBUG 12308 --- [XNIO-1 task-14] r.c.r.s.r.UserMapper.userPage_COUNT      : ==>  Preparing: SELECT count(0) FROM t_user WHERE deleted = 0 AND role = ? 
+2023-04-11 19:12:29.046 DEBUG 12308 --- [XNIO-1 task-14] r.c.r.s.r.UserMapper.userPage_COUNT      : ==> Parameters: 3(Integer)
+2023-04-11 19:12:29.049 DEBUG 12308 --- [XNIO-1 task-14] r.c.r.s.r.UserMapper.userPage_COUNT      : <==      Total: 1
+2023-04-11 19:12:29.056 DEBUG 12308 --- [XNIO-1 task-14] r.c.r.s.repository.UserMapper.userPage   : ==>  Preparing: SELECT id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id FROM t_user WHERE deleted = 0 AND role = ? order by id desc LIMIT ? 
+2023-04-11 19:12:29.057 DEBUG 12308 --- [XNIO-1 task-14] r.c.r.s.repository.UserMapper.userPage   : ==> Parameters: 3(Integer), 10(Integer)
+2023-04-11 19:12:29.064 DEBUG 12308 --- [XNIO-1 task-14] r.c.r.s.repository.UserMapper.userPage   : <==      Total: 1
+2023-04-11 19:12:45.949  WARN 12308 --- [XNIO-1 task-15] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2023-04-11 19:13:28.649 DEBUG 12308 --- [XNIO-1 task-16] r.c.r.s.r.UserMapper.userPage_COUNT      : ==>  Preparing: SELECT count(0) FROM t_user WHERE deleted = 0 AND role = ? 
+2023-04-11 19:13:28.650 DEBUG 12308 --- [XNIO-1 task-16] r.c.r.s.r.UserMapper.userPage_COUNT      : ==> Parameters: 1(Integer)
+2023-04-11 19:13:28.651 DEBUG 12308 --- [XNIO-1 task-16] r.c.r.s.r.UserMapper.userPage_COUNT      : <==      Total: 1
+2023-04-11 19:13:28.653 DEBUG 12308 --- [XNIO-1 task-16] r.c.r.s.repository.UserMapper.userPage   : ==>  Preparing: SELECT id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id FROM t_user WHERE deleted = 0 AND role = ? order by id desc LIMIT ? 
+2023-04-11 19:13:28.653 DEBUG 12308 --- [XNIO-1 task-16] r.c.r.s.repository.UserMapper.userPage   : ==> Parameters: 1(Integer), 10(Integer)
+2023-04-11 19:13:28.657 DEBUG 12308 --- [XNIO-1 task-16] r.c.r.s.repository.UserMapper.userPage   : <==      Total: 2
+2023-04-11 19:15:01.652  WARN 12308 --- [XNIO-1 task-17] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2023-04-11 19:46:14.946  INFO 12308 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-11 19:46:14.952  INFO 12308 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-11 19:46:14.954  INFO 12308 --- [Thread-16] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
