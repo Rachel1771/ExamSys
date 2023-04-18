@@ -33,4 +33,9 @@ public interface AdminService {
     int creatSign(int courseId,int teacherId);
 
     List<StudentRecord> getAllRecord();
+
+    int getRecordId();
+
+    int getRealToken(int recordId);
+
 }

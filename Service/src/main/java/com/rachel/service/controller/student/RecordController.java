@@ -8,6 +8,8 @@ import com.rachel.service.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 /**
  * @author Rachel
  * @date 2023/4/13 11:24
@@ -24,15 +26,27 @@ public class RecordController extends BaseApiController {
         this.studentService = studentService;
     }
 
-    @RequestMapping(value = "/dorecord",method = RequestMethod.POST)
-    public RestResponse startRecord(@RequestParam int token, @RequestParam int studentId){
 
+//    @RequestMapping(value = "/dorecord",method = RequestMethod.POST)
+//    public RestResponse startRecord(@RequestParam int token, @RequestParam int studentId){
+//
+//        Boolean aBoolean = studentService.doRecord(token, studentId);
+//        if(aBoolean){
+//            return RestResponse.ok();
+//        }
+//        else {
+//            return RestResponse.fail(202,"签到码错误");
+//        }
+//    }
+    @RequestMapping(value = "/dorecord", method = RequestMethod.POST)
+    public RestResponse startRecord(@RequestBody Map<String, Object> data) {
+        int token = (int) data.get("token");
+        int studentId = (int) data.get("studentId");
         Boolean aBoolean = studentService.doRecord(token, studentId);
-        if(aBoolean){
+        if (aBoolean) {
             return RestResponse.ok();
-        }
-        else {
-            return RestResponse.fail(202,"签到码错误");
+        } else {
+            return RestResponse.fail(202, "签到码错误");
         }
     }
 }

@@ -75,4 +75,16 @@ public class AdminServiceImpl implements AdminService {
        return records;
     }
 
+    @Override
+    public int getRecordId() {
+        int recordId = adminMapper.findRecordId();
+        return recordId;
+    }
+
+    @Override
+    public int getRealToken(int recordId) {
+        int realtoken = adminMapper.findTokenByRecordId(recordId);
+        return realtoken;
+    }
+
 }

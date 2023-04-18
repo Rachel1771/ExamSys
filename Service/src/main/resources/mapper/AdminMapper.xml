@@ -73,7 +73,7 @@
     </select>
 
     <select id="getAllRecord" resultMap="StudentRecordMap">
-        select student_name,statues
+        select student_name,statues,record_time
         from studentrecord where record_id = #{recordId};
     </select>
 </mapper>
