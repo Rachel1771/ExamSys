@@ -42,11 +42,15 @@ public class RecordController extends BaseApiController {
     public RestResponse startRecord(@RequestBody Map<String, Object> data) {
         int token = (int) data.get("token");
         int studentId = (int) data.get("studentId");
-        Boolean aBoolean = studentService.doRecord(token, studentId);
-        if (aBoolean) {
+        int temp = studentService.doRecord(token, studentId);
+        if (temp == 1) {
             return RestResponse.ok();
-        } else {
+        }
+        else if(temp == 1){
             return RestResponse.fail(202, "签到码错误");
+        }
+        else{
+            return RestResponse.fail(203, "签到过期");
         }
     }
 }

@@ -43,4 +43,8 @@ public interface AdminMapper {
 
 //    List<String> getAllRecord(int recordId);
     List<StudentRecord> getAllRecord(int recordId);
+
+    void changeEffective(String effective,int recordId);
+
+    String findStatues(int recordId);
 }

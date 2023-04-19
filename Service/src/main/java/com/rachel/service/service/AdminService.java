@@ -38,4 +38,6 @@ public interface AdminService {
 
     int getRealToken(int recordId);
 
+    void closeRecord();
+
 }

@@ -54,6 +54,7 @@ public class AdminServiceImpl implements AdminService {
         LocalDateTime now = LocalDateTime.now();
         signRecord.setPublishTime(now);
         signRecord.setRecordId(recordId);
+        signRecord.setEffective("YES");
         adminMapper.insertTable(signRecord);
 
 
@@ -85,6 +86,13 @@ public class AdminServiceImpl implements AdminService {
     public int getRealToken(int recordId) {
         int realtoken = adminMapper.findTokenByRecordId(recordId);
         return realtoken;
+    }
+
+    @Override
+    public void closeRecord() {
+        int recordId = adminMapper.findRecordId();
+        String effective = "NO";
+        adminMapper.changeEffective(effective,recordId);
     }
 
 }

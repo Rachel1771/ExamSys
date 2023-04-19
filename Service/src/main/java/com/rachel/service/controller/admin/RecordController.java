@@ -44,19 +44,24 @@ public class RecordController extends BaseApiController {
         return adminService.creatSign(courseId,teacherId);
     }
 
+    @RequestMapping(value = "/closerecord",method = RequestMethod.POST)
+    @ResponseBody
+    public RestResponse closeRecord(@RequestBody Map<String, Object> data){
+        Boolean flag = (Boolean) data.get("flag");
+        if(flag){
+            adminService.closeRecord();
+        }
+        return RestResponse.ok();
+    }
+
     @RequestMapping(value = "/getallrecord",method = RequestMethod.POST)
     @ResponseBody
-    public String getAllRecord(@RequestBody(required = false) Map<String, Object> data) {
-        boolean flag = true;
-        if(data != null && data.containsKey("flag")){
-            Object flagValue = data.get("flag");
-            if(flagValue instanceof Boolean){
-                flag = (Boolean) flagValue;
-            }
-        }
+    public String getAllRecord() {
+        int recordId = adminService.getRecordId();
+        int realtoken = adminService.getRealToken(recordId);
         List<StudentRecord> records = adminService.getAllRecord();
         Map<String, Object> map = new HashMap<>();
-        map.put("code", flag);
+        map.put("code",realtoken);
         map.put("list", records);
         return new Gson().toJson(map);
     }

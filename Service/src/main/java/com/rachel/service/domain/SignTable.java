@@ -36,6 +36,17 @@ public class SignTable {
     @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime publishTime;
 
+    @ApiModelProperty(value = "是否有效")
+    @TableField("effective")
+    private String effective;
+
+    public String getEffective() {
+        return effective;
+    }
+
+    public void setEffective(String effective) {
+        this.effective = effective;
+    }
 
     public Integer getRecordId() {
         return recordId;
@@ -77,15 +88,13 @@ public class SignTable {
         this.publishTime = publishTime;
     }
 
-
-
-    public SignTable(Integer recordId, Integer courseId, Integer token, Integer teacherId, LocalDateTime publishTime) {
+    public SignTable(Integer recordId, Integer courseId, Integer token, Integer teacherId, LocalDateTime publishTime, String effective) {
         this.recordId = recordId;
         this.courseId = courseId;
         this.token = token;
         this.teacherId = teacherId;
         this.publishTime = publishTime;
-
+        this.effective = effective;
     }
 
     public SignTable() {

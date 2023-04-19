@@ -33,14 +33,11 @@
     </resultMap>
 
     <insert id="insertTable" parameterType="com.rachel.service.domain.SignTable">
-        INSERT INTO signtable ( record_id,course_id,token, teacher_id,publish_time)
-        VALUES ( #{recordId}, #{courseId},#{token},#{teacherId},#{publishTime})
+        INSERT INTO signtable ( record_id,course_id,token, teacher_id,publish_time,effective)
+        VALUES ( #{recordId}, #{courseId},#{token},#{teacherId},#{publishTime},#{effective})
     </insert>
 
-    <insert id="insertRecord" parameterType="com.rachel.service.domain.StudentRecord">
-        insert  into studentrecord(record_id,course_id,student_id,student_name,record_time,statues,role)
-        values (#{recordId},#{courseId},#{studentId},#{studentName},#{recordTime},#{statues},#{role})
-     </insert>
+
 
 
 <!--    <select id="selectAllByStatuesStrings" resultType="java.lang.String">-->
@@ -76,6 +73,18 @@
         select student_name,statues,record_time
         from studentrecord where record_id = #{recordId};
     </select>
+    <select id="findStatues" resultType="java.lang.String">
+        select effective from signtable where record_id = #{recordId};
+    </select>
+
+    <insert id="insertRecord" parameterType="com.rachel.service.domain.StudentRecord">
+        insert  into studentrecord(record_id,course_id,student_id,student_name,record_time,statues,role)
+        values (#{recordId},#{courseId},#{studentId},#{studentName},#{recordTime},#{statues},#{role})
+    </insert>
+
+    <update id="changeEffective">
+        update signtable set effective = #{effective} where record_id  =#{recordId}
+    </update>
 </mapper>
 
         <!--        useGeneratedKeys="true" keyProperty="id">-->
