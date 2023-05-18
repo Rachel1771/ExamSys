@@ -80,6 +80,7 @@ public class QuestionController extends BaseApiController {
         return RestResponse.ok();
     }
 
+    //用来判断编辑的题目是否正确
     private RestResponse validQuestionEditRequestVM(QuestionEditRequestVM model) {
         int qType = model.getQuestionType().intValue();
         boolean requireCorrect = qType == QuestionTypeEnum.SingleChoice.getCode() || qType == QuestionTypeEnum.TrueFalse.getCode();

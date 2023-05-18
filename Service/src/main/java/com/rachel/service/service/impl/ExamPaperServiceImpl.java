@@ -59,26 +59,28 @@ public class ExamPaperServiceImpl extends BaseServiceImpl<ExamPaper> implements 
         this.subjectService = subjectService;
     }
 
-
+    //使用PageHelper插件实现了试卷的分页查询
     @Override
     public PageInfo<ExamPaper> page(ExamPaperPageRequestVM requestVM) {
         return PageHelper.startPage(requestVM.getPageIndex(), requestVM.getPageSize(), "id desc").doSelectPageInfo(() ->
                 examPaperMapper.page(requestVM));
     }
 
+    //任务部分的分页
     @Override
     public PageInfo<ExamPaper> taskExamPage(ExamPaperPageRequestVM requestVM) {
         return PageHelper.startPage(requestVM.getPageIndex(), requestVM.getPageSize(), "id desc").doSelectPageInfo(() ->
                 examPaperMapper.taskExamPage(requestVM));
     }
 
+    //学生端的分页
     @Override
     public PageInfo<ExamPaper> studentPage(ExamPaperPageVM requestVM) {
         return PageHelper.startPage(requestVM.getPageIndex(), requestVM.getPageSize(), "id desc").doSelectPageInfo(() ->
                 examPaperMapper.studentPage(requestVM));
     }
 
-
+    //试卷的保存，也就是：新增试卷和更新试卷之后需要进行保存
     @Override
     @Transactional
     public ExamPaper savePaperFromVM(ExamPaperEditRequestVM examPaperEditRequestVM, User user) {
@@ -89,7 +91,7 @@ public class ExamPaperServiceImpl extends BaseServiceImpl<ExamPaper> implements 
         String frameTextContentStr = JsonUtil.toJsonStr(frameTextContentList);
 
         ExamPaper examPaper;
-        if (actionEnum == ActionEnum.ADD) {
+        if (actionEnum == ActionEnum.ADD) {   //添加试卷
             examPaper = modelMapper.map(examPaperEditRequestVM, ExamPaper.class);
             TextContent frameTextContent = new TextContent(frameTextContentStr, now);
             textContentService.insertByFilter(frameTextContent);
@@ -111,6 +113,7 @@ public class ExamPaperServiceImpl extends BaseServiceImpl<ExamPaper> implements 
         return examPaper;
     }
 
+    //试卷转换为视图模型
     @Override
     public ExamPaperEditRequestVM examPaperToVM(Integer id) {
         ExamPaper examPaper = examPaperMapper.selectByPrimaryKey(id);
@@ -143,17 +146,19 @@ public class ExamPaperServiceImpl extends BaseServiceImpl<ExamPaper> implements 
         return vm;
     }
 
+    //首页展示信息
     @Override
     public List<PaperInfo> indexPaper(PaperFilter paperFilter) {
         return examPaperMapper.indexPaper(paperFilter);
     }
 
-
+    //查询试卷总数
     @Override
     public Integer selectAllCount() {
         return examPaperMapper.selectAllCount();
     }
 
+    //每月的试卷信息展示
     @Override
     public List<Integer> selectMothCount() {
         Date startTime = DateTimeUtil.getMonthStartDay();
@@ -166,6 +171,7 @@ public class ExamPaperServiceImpl extends BaseServiceImpl<ExamPaper> implements 
         }).collect(Collectors.toList());
     }
 
+    //前端的请求视图属性复制给试卷类，并且计算相应信息
     private void examPaperFromVM(ExamPaperEditRequestVM examPaperEditRequestVM, ExamPaper examPaper, List<ExamPaperTitleItemVM> titleItemsVM) {
         Integer gradeLevel = subjectService.levelBySubjectId(examPaperEditRequestVM.getSubjectId());
         Integer questionCount = titleItemsVM.stream()
@@ -184,6 +190,7 @@ public class ExamPaperServiceImpl extends BaseServiceImpl<ExamPaper> implements 
         }
     }
 
+    //视图对象转化成持久化对象
     private List<ExamPaperTitleItemObject> frameTextContentFromVM(List<ExamPaperTitleItemVM> titleItems) {
         AtomicInteger index = new AtomicInteger(1);
         return titleItems.stream().map(t -> {

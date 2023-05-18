@@ -1,0 +1,1359 @@
+2023-04-19 17:01:46.012  INFO 15124 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 15124 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-19 17:01:46.015  INFO 15124 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-19 17:01:46.062  INFO 15124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-19 17:01:46.063  INFO 15124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-19 17:01:47.851  WARN 15124 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-19 17:01:47.876  INFO 15124 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-19 17:01:47.876  INFO 15124 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1813 ms
+2023-04-19 17:01:48.891  INFO 15124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@610e93e7, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e594d60, org.springframework.security.web.header.HeaderWriterFilter@92e0c11, org.springframework.web.filter.CorsFilter@76cca5c2, org.springframework.security.web.authentication.logout.LogoutFilter@7ccb01d0, com.rachel.service.configuration.spring.security.RestLoginAuthenticationFilter@562c2d94, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@38809779, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28f28f34, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c5f4774, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@10169d4c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57d6f0a, org.springframework.security.web.session.SessionManagementFilter@1675a51d, org.springframework.security.web.access.ExceptionTranslationFilter@36a72ca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f46d7cd]
+2023-04-19 17:01:49.441  INFO 15124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-19 17:01:49.505  INFO 15124 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-04-19 17:01:49.517  INFO 15124 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-04-19 17:01:49.582  INFO 15124 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-04-19 17:01:49.585  INFO 15124 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 4.196 seconds (JVM running for 5.54)
+2023-04-19 17:02:11.385  INFO 15124 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-19 17:02:11.385  INFO 15124 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-19 17:02:11.396  INFO 15124 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2023-04-19 17:02:11.490  INFO 15124 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-19 17:02:11.654  INFO 15124 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-19 17:02:11.662 DEBUG 15124 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:02:11.684 DEBUG 15124 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 17:02:11.717 DEBUG 15124 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:02:12.278 DEBUG 15124 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:02:12.279 DEBUG 15124 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 17:02:12.280 DEBUG 15124 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:02:12.297 DEBUG 15124 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 17:02:12.299 DEBUG 15124 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-19 17:02:12.281(Timestamp)
+2023-04-19 17:02:12.314 DEBUG 15124 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 17:02:30.877 DEBUG 15124 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 17:02:30.878 DEBUG 15124 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 17:02:30.881 DEBUG 15124 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 17:02:30.882 DEBUG 15124 --- [XNIO-1 task-2] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 17:02:30.882 DEBUG 15124 --- [XNIO-1 task-2] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 98413(Integer)
+2023-04-19 17:02:30.883 DEBUG 15124 --- [XNIO-1 task-2] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 17:02:30.883 DEBUG 15124 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 17:02:30.884 DEBUG 15124 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 17:02:30.885 DEBUG 15124 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 17:02:30.886 DEBUG 15124 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.getAllRecord       : ==>  Preparing: select student_name,statues,record_time from studentrecord where record_id = ?; 
+2023-04-19 17:02:30.886 DEBUG 15124 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.getAllRecord       : ==> Parameters: 98413(Integer)
+2023-04-19 17:02:30.891 DEBUG 15124 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.getAllRecord       : <==      Total: 2
+2023-04-19 17:02:49.634 DEBUG 15124 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 17:02:49.634 DEBUG 15124 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 17:02:49.635 DEBUG 15124 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 17:02:49.635 DEBUG 15124 --- [XNIO-1 task-3] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 17:02:49.635 DEBUG 15124 --- [XNIO-1 task-3] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 98413(Integer)
+2023-04-19 17:02:49.636 DEBUG 15124 --- [XNIO-1 task-3] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 17:02:49.637 DEBUG 15124 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 17:02:49.637 DEBUG 15124 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 17:02:49.642 DEBUG 15124 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 17:02:49.642 DEBUG 15124 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.getAllRecord       : ==>  Preparing: select student_name,statues,record_time from studentrecord where record_id = ?; 
+2023-04-19 17:02:49.642 DEBUG 15124 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.getAllRecord       : ==> Parameters: 98413(Integer)
+2023-04-19 17:02:49.643 DEBUG 15124 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.getAllRecord       : <==      Total: 2
+2023-04-19 17:03:05.236  INFO 15124 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-19 17:03:05.245  INFO 15124 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-19 17:03:05.246  INFO 15124 --- [Thread-16] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-19 17:41:20.418  INFO 9084 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 9084 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-19 17:41:20.422  INFO 9084 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-19 17:41:20.466  INFO 9084 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-19 17:41:20.466  INFO 9084 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-19 17:41:22.079  WARN 9084 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-19 17:41:22.102  INFO 9084 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-19 17:41:22.103  INFO 9084 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1637 ms
+2023-04-19 17:41:22.871  WARN 9084 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [com/rachel/service/configuration/spring/mvc/WebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'AdminRecordController' method 
+public com.rachel.service.base.RestResponse com.rachel.service.controller.admin.RecordController.closeRecord(java.util.Map<java.lang.String, java.lang.Object>)
+to {POST /api/admin/record/createrecord}: There is already 'AdminRecordController' bean method
+public int com.rachel.service.controller.admin.RecordController.createRecord(java.util.Map<java.lang.String, java.lang.Object>) mapped.
+2023-04-19 17:41:22.881  INFO 9084 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-19 17:41:22.888 ERROR 9084 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [com/rachel/service/configuration/spring/mvc/WebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'AdminRecordController' method 
+public com.rachel.service.base.RestResponse com.rachel.service.controller.admin.RecordController.closeRecord(java.util.Map<java.lang.String, java.lang.Object>)
+to {POST /api/admin/record/createrecord}: There is already 'AdminRecordController' bean method
+public int com.rachel.service.controller.admin.RecordController.createRecord(java.util.Map<java.lang.String, java.lang.Object>) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.rachel.service.ServiceApplication.main(ServiceApplication.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'AdminRecordController' method 
+public com.rachel.service.base.RestResponse com.rachel.service.controller.admin.RecordController.closeRecord(java.util.Map<java.lang.String, java.lang.Object>)
+to {POST /api/admin/record/createrecord}: There is already 'AdminRecordController' bean method
+public int com.rachel.service.controller.admin.RecordController.createRecord(java.util.Map<java.lang.String, java.lang.Object>) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:618)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:586)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:312)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:282)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:280)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:252)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:211)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:199)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:164)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	... 21 common frames omitted
+
+2023-04-19 17:43:08.095  INFO 10120 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 10120 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-19 17:43:08.097  INFO 10120 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-19 17:43:08.144  INFO 10120 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-19 17:43:08.144  INFO 10120 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-19 17:43:09.813  WARN 10120 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-19 17:43:09.837  INFO 10120 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-19 17:43:09.838  INFO 10120 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1694 ms
+2023-04-19 17:43:10.958  INFO 10120 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48510514, org.springframework.security.web.context.SecurityContextPersistenceFilter@21f8de4f, org.springframework.security.web.header.HeaderWriterFilter@76f1708b, org.springframework.web.filter.CorsFilter@3b55b238, org.springframework.security.web.authentication.logout.LogoutFilter@580079e5, com.rachel.service.configuration.spring.security.RestLoginAuthenticationFilter@2530332c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@74a520a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f42abc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41c0644a, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@4a2031aa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@351ec30a, org.springframework.security.web.session.SessionManagementFilter@53a0ce8b, org.springframework.security.web.access.ExceptionTranslationFilter@15065a39, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@19c4197d]
+2023-04-19 17:43:11.534  INFO 10120 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-19 17:43:11.595  INFO 10120 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-04-19 17:43:11.604  INFO 10120 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-04-19 17:43:11.663  INFO 10120 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-04-19 17:43:11.666  INFO 10120 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 4.179 seconds (JVM running for 5.443)
+2023-04-19 17:43:35.712  INFO 10120 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-19 17:43:35.713  INFO 10120 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-19 17:43:35.719  INFO 10120 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-04-19 17:43:35.819  INFO 10120 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-19 17:43:35.950  INFO 10120 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-19 17:43:35.956 DEBUG 10120 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:43:35.980 DEBUG 10120 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 17:43:36.004 DEBUG 10120 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:43:36.522 DEBUG 10120 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:43:36.522 DEBUG 10120 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 17:43:36.524 DEBUG 10120 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:43:36.542 DEBUG 10120 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 17:43:36.546 DEBUG 10120 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-19 17:43:36.525(Timestamp)
+2023-04-19 17:43:36.559 DEBUG 10120 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 17:44:49.223 DEBUG 10120 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertTable        : ==>  Preparing: INSERT INTO signtable ( record_id,course_id,token, teacher_id,publish_time) VALUES ( ?, ?,?,?,?) 
+2023-04-19 17:44:49.223 DEBUG 10120 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertTable        : ==> Parameters: 37427(Integer), 123456(Integer), 2438(Integer), 2(Integer), 2023-04-19T17:44:49.221(LocalDateTime)
+2023-04-19 17:44:49.230 DEBUG 10120 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertTable        : <==    Updates: 1
+2023-04-19 17:44:49.230 DEBUG 10120 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findBycourseId     : ==>  Preparing: select * from course where course_id = ?; 
+2023-04-19 17:44:49.231 DEBUG 10120 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findBycourseId     : ==> Parameters: 123456(Integer)
+2023-04-19 17:44:49.233 DEBUG 10120 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findBycourseId     : <==      Total: 2
+2023-04-19 17:44:49.233 DEBUG 10120 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==>  Preparing: insert into studentrecord(record_id,course_id,student_id,student_name,record_time,statues,role) values (?,?,?,?,?,?,?) 
+2023-04-19 17:44:49.234 DEBUG 10120 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==> Parameters: 37427(Integer), 123456(Integer), 1(Integer), student(String), null, FALSE(String), 1(Integer)
+2023-04-19 17:44:49.237 DEBUG 10120 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : <==    Updates: 1
+2023-04-19 17:44:49.237 DEBUG 10120 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==>  Preparing: insert into studentrecord(record_id,course_id,student_id,student_name,record_time,statues,role) values (?,?,?,?,?,?,?) 
+2023-04-19 17:44:49.237 DEBUG 10120 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==> Parameters: 37427(Integer), 123456(Integer), 3(Integer), Rachel(String), null, FALSE(String), 1(Integer)
+2023-04-19 17:44:49.243 DEBUG 10120 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : <==    Updates: 1
+2023-04-19 17:45:43.761 DEBUG 10120 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 17:45:43.761 DEBUG 10120 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 17:45:43.762 DEBUG 10120 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 17:45:43.764 DEBUG 10120 --- [XNIO-1 task-3] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 17:45:43.764 DEBUG 10120 --- [XNIO-1 task-3] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 37427(Integer)
+2023-04-19 17:45:43.765 DEBUG 10120 --- [XNIO-1 task-3] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 17:45:43.765 DEBUG 10120 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 17:45:43.765 DEBUG 10120 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 17:45:43.766 DEBUG 10120 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 17:45:43.767 DEBUG 10120 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.getAllRecord       : ==>  Preparing: select student_name,statues,record_time from studentrecord where record_id = ?; 
+2023-04-19 17:45:43.767 DEBUG 10120 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.getAllRecord       : ==> Parameters: 37427(Integer)
+2023-04-19 17:45:43.770 DEBUG 10120 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.getAllRecord       : <==      Total: 2
+2023-04-19 17:46:07.846 DEBUG 10120 --- [XNIO-1 task-4] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:46:07.847 DEBUG 10120 --- [XNIO-1 task-4] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-19 17:46:07.848 DEBUG 10120 --- [XNIO-1 task-4] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:46:07.852 DEBUG 10120 --- [XNIO-1 task-4] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:46:07.852 DEBUG 10120 --- [XNIO-1 task-4] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-19 17:46:07.854 DEBUG 10120 --- [XNIO-1 task-4] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:46:07.855 DEBUG 10120 --- [XNIO-1 task-4] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 17:46:07.855 DEBUG 10120 --- [XNIO-1 task-4] r.c.r.s.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 登录了学之思开源考试系统(String), 2023-04-19 17:46:07.854(Timestamp)
+2023-04-19 17:46:07.861 DEBUG 10120 --- [XNIO-1 task-4] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 17:47:37.336 DEBUG 10120 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 17:47:37.336 DEBUG 10120 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 17:47:37.337 DEBUG 10120 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 17:47:37.338 DEBUG 10120 --- [XNIO-1 task-6] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 17:47:37.339 DEBUG 10120 --- [XNIO-1 task-6] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 37427(Integer)
+2023-04-19 17:47:37.340 DEBUG 10120 --- [XNIO-1 task-6] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 17:47:37.343 DEBUG 10120 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.findStatues        : ==>  Preparing: select effective from studentrecord where record_id = ?; 
+2023-04-19 17:47:37.344 DEBUG 10120 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.findStatues        : ==> Parameters: 37427(Integer)
+2023-04-19 17:47:37.401 ERROR 10120 --- [XNIO-1 task-6] c.r.s.c.s.exception.ExceptionHandle      : 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'effective' in 'field list'
+### The error may exist in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select effective from studentrecord where record_id = ?;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'effective' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'effective' in 'field list'
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'effective' in 'field list'
+### The error may exist in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select effective from studentrecord where record_id = ?;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'effective' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'effective' in 'field list'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:234)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:74)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy64.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57)
+	at com.sun.proxy.$Proxy89.findStatues(Unknown Source)
+	at com.rachel.service.service.impl.StudentServiceImpl.doRecord(StudentServiceImpl.java:36)
+	at com.rachel.service.controller.student.RecordController.startRecord(RecordController.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'effective' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor41.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy106.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:108)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy104.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 101 common frames omitted
+
+2023-04-19 17:50:10.656  INFO 10120 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-19 17:50:10.666  INFO 10120 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-19 17:50:10.667  INFO 10120 --- [Thread-16] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-19 17:50:14.701  INFO 27112 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 27112 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-19 17:50:14.705  INFO 27112 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-19 17:50:14.788  INFO 27112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-19 17:50:14.789  INFO 27112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-19 17:50:16.536  WARN 27112 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-19 17:50:16.563  INFO 27112 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-19 17:50:16.563  INFO 27112 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1774 ms
+2023-04-19 17:50:17.651  INFO 27112 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@684e4622, org.springframework.security.web.context.SecurityContextPersistenceFilter@43465c52, org.springframework.security.web.header.HeaderWriterFilter@7ee20ce8, org.springframework.web.filter.CorsFilter@33745b46, org.springframework.security.web.authentication.logout.LogoutFilter@6fd95865, com.rachel.service.configuration.spring.security.RestLoginAuthenticationFilter@6c86736f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2980a7e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34d179d7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@68328642, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@1aba298c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ebce400, org.springframework.security.web.session.SessionManagementFilter@791e56c1, org.springframework.security.web.access.ExceptionTranslationFilter@4e95b084, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e5870f9]
+2023-04-19 17:50:18.232  INFO 27112 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-19 17:50:18.305  INFO 27112 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-04-19 17:50:18.317  INFO 27112 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-04-19 17:50:18.393  INFO 27112 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-04-19 17:50:18.396  INFO 27112 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 4.268 seconds (JVM running for 5.614)
+2023-04-19 17:50:43.881  INFO 27112 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-19 17:50:43.881  INFO 27112 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-19 17:50:43.889  INFO 27112 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-04-19 17:50:43.995  INFO 27112 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-19 17:50:44.113  INFO 27112 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-19 17:50:44.120 DEBUG 27112 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:50:44.142 DEBUG 27112 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-19 17:50:44.165 DEBUG 27112 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:50:44.663 DEBUG 27112 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:50:44.663 DEBUG 27112 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-19 17:50:44.664 DEBUG 27112 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:50:44.683 DEBUG 27112 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 17:50:44.685 DEBUG 27112 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 登录了学之思开源考试系统(String), 2023-04-19 17:50:44.666(Timestamp)
+2023-04-19 17:50:44.691 DEBUG 27112 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 17:50:50.139 DEBUG 27112 --- [XNIO-1 task-2] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:50:50.140 DEBUG 27112 --- [XNIO-1 task-2] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 17:50:50.145 DEBUG 27112 --- [XNIO-1 task-2] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:50:50.149 DEBUG 27112 --- [XNIO-1 task-2] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:50:50.149 DEBUG 27112 --- [XNIO-1 task-2] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 17:50:50.151 DEBUG 27112 --- [XNIO-1 task-2] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:50:50.152 DEBUG 27112 --- [XNIO-1 task-2] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 17:50:50.153 DEBUG 27112 --- [XNIO-1 task-2] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-19 17:50:50.152(Timestamp)
+2023-04-19 17:50:50.158 DEBUG 27112 --- [XNIO-1 task-2] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 17:51:10.365 DEBUG 27112 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.insertTable        : ==>  Preparing: INSERT INTO signtable ( record_id,course_id,token, teacher_id,publish_time,effective) VALUES ( ?, ?,?,?,?,?) 
+2023-04-19 17:51:10.367 DEBUG 27112 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.insertTable        : ==> Parameters: 65757(Integer), 123456(Integer), 3910(Integer), 2(Integer), 2023-04-19T17:51:10.364(LocalDateTime), YES(String)
+2023-04-19 17:51:10.371 DEBUG 27112 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.insertTable        : <==    Updates: 1
+2023-04-19 17:51:10.371 DEBUG 27112 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findBycourseId     : ==>  Preparing: select * from course where course_id = ?; 
+2023-04-19 17:51:10.372 DEBUG 27112 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findBycourseId     : ==> Parameters: 123456(Integer)
+2023-04-19 17:51:10.374 DEBUG 27112 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findBycourseId     : <==      Total: 2
+2023-04-19 17:51:10.375 DEBUG 27112 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.insertRecord       : ==>  Preparing: insert into studentrecord(record_id,course_id,student_id,student_name,record_time,statues,role) values (?,?,?,?,?,?,?) 
+2023-04-19 17:51:10.377 DEBUG 27112 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.insertRecord       : ==> Parameters: 65757(Integer), 123456(Integer), 1(Integer), student(String), null, FALSE(String), 1(Integer)
+2023-04-19 17:51:10.385 DEBUG 27112 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.insertRecord       : <==    Updates: 1
+2023-04-19 17:51:10.387 DEBUG 27112 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.insertRecord       : ==>  Preparing: insert into studentrecord(record_id,course_id,student_id,student_name,record_time,statues,role) values (?,?,?,?,?,?,?) 
+2023-04-19 17:51:10.388 DEBUG 27112 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.insertRecord       : ==> Parameters: 65757(Integer), 123456(Integer), 3(Integer), Rachel(String), null, FALSE(String), 1(Integer)
+2023-04-19 17:51:10.392 DEBUG 27112 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.insertRecord       : <==    Updates: 1
+2023-04-19 17:51:39.281 DEBUG 27112 --- [XNIO-1 task-4] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:51:39.283 DEBUG 27112 --- [XNIO-1 task-4] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-19 17:51:39.284 DEBUG 27112 --- [XNIO-1 task-4] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:51:39.286 DEBUG 27112 --- [XNIO-1 task-4] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:51:39.287 DEBUG 27112 --- [XNIO-1 task-4] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-19 17:51:39.288 DEBUG 27112 --- [XNIO-1 task-4] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:51:39.289 DEBUG 27112 --- [XNIO-1 task-4] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 17:51:39.290 DEBUG 27112 --- [XNIO-1 task-4] r.c.r.s.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 登录了学之思开源考试系统(String), 2023-04-19 17:51:39.288(Timestamp)
+2023-04-19 17:51:39.295 DEBUG 27112 --- [XNIO-1 task-4] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 17:52:06.287 DEBUG 27112 --- [XNIO-1 task-5] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 17:52:06.288 DEBUG 27112 --- [XNIO-1 task-5] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 17:52:06.289 DEBUG 27112 --- [XNIO-1 task-5] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 17:52:06.290 DEBUG 27112 --- [XNIO-1 task-5] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 17:52:06.290 DEBUG 27112 --- [XNIO-1 task-5] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 65757(Integer)
+2023-04-19 17:52:06.294 DEBUG 27112 --- [XNIO-1 task-5] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 17:52:06.296 DEBUG 27112 --- [XNIO-1 task-5] r.c.r.s.r.AdminMapper.findStatues        : ==>  Preparing: select effective from studentrecord where record_id = ?; 
+2023-04-19 17:52:06.296 DEBUG 27112 --- [XNIO-1 task-5] r.c.r.s.r.AdminMapper.findStatues        : ==> Parameters: 65757(Integer)
+2023-04-19 17:52:06.351 ERROR 27112 --- [XNIO-1 task-5] c.r.s.c.s.exception.ExceptionHandle      : 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'effective' in 'field list'
+### The error may exist in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select effective from studentrecord where record_id = ?;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'effective' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'effective' in 'field list'
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'effective' in 'field list'
+### The error may exist in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select effective from studentrecord where record_id = ?;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'effective' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'effective' in 'field list'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:234)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:74)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy64.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57)
+	at com.sun.proxy.$Proxy89.findStatues(Unknown Source)
+	at com.rachel.service.service.impl.StudentServiceImpl.doRecord(StudentServiceImpl.java:36)
+	at com.rachel.service.controller.student.RecordController.startRecord(RecordController.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'effective' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy106.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:108)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy104.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 101 common frames omitted
+
+2023-04-19 17:53:23.647  INFO 27112 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-19 17:53:23.657  INFO 27112 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-19 17:53:23.659  INFO 27112 --- [Thread-16] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-19 17:53:28.104  INFO 17788 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 17788 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-19 17:53:28.106  INFO 17788 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-19 17:53:28.155  INFO 17788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-19 17:53:28.155  INFO 17788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-19 17:53:30.025  WARN 17788 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-19 17:53:30.053  INFO 17788 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-19 17:53:30.054  INFO 17788 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1899 ms
+2023-04-19 17:53:31.126  INFO 17788 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4745baa1, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d6b9d8b, org.springframework.security.web.header.HeaderWriterFilter@1867d63c, org.springframework.web.filter.CorsFilter@4c19839a, org.springframework.security.web.authentication.logout.LogoutFilter@52fa84eb, com.rachel.service.configuration.spring.security.RestLoginAuthenticationFilter@3c4660b6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5989c29, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fd2dde5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73e33b1b, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@43e3a6f9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c0d59d8, org.springframework.security.web.session.SessionManagementFilter@3e136abc, org.springframework.security.web.access.ExceptionTranslationFilter@2183331, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5e5da81]
+2023-04-19 17:53:31.705  INFO 17788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-19 17:53:31.768  INFO 17788 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-04-19 17:53:31.778  INFO 17788 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-04-19 17:53:31.842  INFO 17788 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-04-19 17:53:31.846  INFO 17788 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 4.446 seconds (JVM running for 5.797)
+2023-04-19 17:53:44.351  INFO 17788 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-19 17:53:44.351  INFO 17788 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-19 17:53:44.360  INFO 17788 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-04-19 17:53:44.456  INFO 17788 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-19 17:53:44.593  INFO 17788 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-19 17:53:44.600 DEBUG 17788 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:53:44.629 DEBUG 17788 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 17:53:44.661 DEBUG 17788 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:53:45.228 DEBUG 17788 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:53:45.228 DEBUG 17788 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 17:53:45.230 DEBUG 17788 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:53:45.259 DEBUG 17788 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 17:53:45.262 DEBUG 17788 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-19 17:53:45.23(Timestamp)
+2023-04-19 17:53:45.276 DEBUG 17788 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 17:54:02.033 DEBUG 17788 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertTable        : ==>  Preparing: INSERT INTO signtable ( record_id,course_id,token, teacher_id,publish_time,effective) VALUES ( ?, ?,?,?,?,?) 
+2023-04-19 17:54:02.034 DEBUG 17788 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertTable        : ==> Parameters: 61948(Integer), 123456(Integer), 8411(Integer), 2(Integer), 2023-04-19T17:54:02.033(LocalDateTime), YES(String)
+2023-04-19 17:54:02.040 DEBUG 17788 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertTable        : <==    Updates: 1
+2023-04-19 17:54:02.041 DEBUG 17788 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findBycourseId     : ==>  Preparing: select * from course where course_id = ?; 
+2023-04-19 17:54:02.042 DEBUG 17788 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findBycourseId     : ==> Parameters: 123456(Integer)
+2023-04-19 17:54:02.045 DEBUG 17788 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findBycourseId     : <==      Total: 2
+2023-04-19 17:54:02.046 DEBUG 17788 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==>  Preparing: insert into studentrecord(record_id,course_id,student_id,student_name,record_time,statues,role) values (?,?,?,?,?,?,?) 
+2023-04-19 17:54:02.046 DEBUG 17788 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==> Parameters: 61948(Integer), 123456(Integer), 1(Integer), student(String), null, FALSE(String), 1(Integer)
+2023-04-19 17:54:02.050 DEBUG 17788 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : <==    Updates: 1
+2023-04-19 17:54:02.050 DEBUG 17788 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==>  Preparing: insert into studentrecord(record_id,course_id,student_id,student_name,record_time,statues,role) values (?,?,?,?,?,?,?) 
+2023-04-19 17:54:02.051 DEBUG 17788 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==> Parameters: 61948(Integer), 123456(Integer), 3(Integer), Rachel(String), null, FALSE(String), 1(Integer)
+2023-04-19 17:54:02.055 DEBUG 17788 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : <==    Updates: 1
+2023-04-19 17:54:19.655 DEBUG 17788 --- [XNIO-1 task-3] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:54:19.656 DEBUG 17788 --- [XNIO-1 task-3] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-19 17:54:19.658 DEBUG 17788 --- [XNIO-1 task-3] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:54:19.662 DEBUG 17788 --- [XNIO-1 task-3] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:54:19.663 DEBUG 17788 --- [XNIO-1 task-3] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-19 17:54:19.665 DEBUG 17788 --- [XNIO-1 task-3] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:54:19.666 DEBUG 17788 --- [XNIO-1 task-3] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 17:54:19.667 DEBUG 17788 --- [XNIO-1 task-3] r.c.r.s.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 登录了学之思开源考试系统(String), 2023-04-19 17:54:19.666(Timestamp)
+2023-04-19 17:54:19.670 DEBUG 17788 --- [XNIO-1 task-3] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 17:54:38.667 DEBUG 17788 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 17:54:38.668 DEBUG 17788 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 17:54:38.669 DEBUG 17788 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 17:54:38.670 DEBUG 17788 --- [XNIO-1 task-4] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 17:54:38.671 DEBUG 17788 --- [XNIO-1 task-4] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 61948(Integer)
+2023-04-19 17:54:38.672 DEBUG 17788 --- [XNIO-1 task-4] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 17:54:38.673 DEBUG 17788 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findStatues        : ==>  Preparing: select effective from signtable where record_id = ?; 
+2023-04-19 17:54:38.673 DEBUG 17788 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findStatues        : ==> Parameters: 61948(Integer)
+2023-04-19 17:54:38.675 DEBUG 17788 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findStatues        : <==      Total: 1
+2023-04-19 17:54:38.676 DEBUG 17788 --- [XNIO-1 task-4] r.c.r.s.r.StudentMapper.upDateRecord     : ==>  Preparing: update studentrecord set record_time = ? ,statues = ? where student_id = ? and record_id = ? 
+2023-04-19 17:54:38.677 DEBUG 17788 --- [XNIO-1 task-4] r.c.r.s.r.StudentMapper.upDateRecord     : ==> Parameters: 2023-04-19T17:54:38.676(LocalDateTime), TRUE(String), 3(Integer), 61948(Integer)
+2023-04-19 17:54:38.681 DEBUG 17788 --- [XNIO-1 task-4] r.c.r.s.r.StudentMapper.upDateRecord     : <==    Updates: 1
+2023-04-19 17:55:02.266 DEBUG 17788 --- [XNIO-1 task-5] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:55:02.267 DEBUG 17788 --- [XNIO-1 task-5] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 17:55:02.268 DEBUG 17788 --- [XNIO-1 task-5] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:55:02.271 DEBUG 17788 --- [XNIO-1 task-5] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:55:02.272 DEBUG 17788 --- [XNIO-1 task-5] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 17:55:02.276 DEBUG 17788 --- [XNIO-1 task-5] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:55:02.278 DEBUG 17788 --- [XNIO-1 task-5] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 17:55:02.278 DEBUG 17788 --- [XNIO-1 task-5] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-19 17:55:02.278(Timestamp)
+2023-04-19 17:55:02.283 DEBUG 17788 --- [XNIO-1 task-5] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 17:55:19.885 DEBUG 17788 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 17:55:19.886 DEBUG 17788 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 17:55:19.887 DEBUG 17788 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 17:55:19.887 DEBUG 17788 --- [XNIO-1 task-6] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 17:55:19.888 DEBUG 17788 --- [XNIO-1 task-6] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 61948(Integer)
+2023-04-19 17:55:19.888 DEBUG 17788 --- [XNIO-1 task-6] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 17:55:19.889 DEBUG 17788 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 17:55:19.889 DEBUG 17788 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 17:55:19.891 DEBUG 17788 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 17:55:19.893 DEBUG 17788 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.getAllRecord       : ==>  Preparing: select student_name,statues,record_time from studentrecord where record_id = ?; 
+2023-04-19 17:55:19.894 DEBUG 17788 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.getAllRecord       : ==> Parameters: 61948(Integer)
+2023-04-19 17:55:19.898 DEBUG 17788 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.getAllRecord       : <==      Total: 2
+2023-04-19 17:56:03.225 DEBUG 17788 --- [XNIO-1 task-7] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 17:56:03.225 DEBUG 17788 --- [XNIO-1 task-7] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 17:56:03.227 DEBUG 17788 --- [XNIO-1 task-7] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 17:56:03.227 DEBUG 17788 --- [XNIO-1 task-7] r.c.r.s.r.AdminMapper.changeEffective    : ==>  Preparing: update signtable set effective = ? where recordId =? 
+2023-04-19 17:56:03.227 DEBUG 17788 --- [XNIO-1 task-7] r.c.r.s.r.AdminMapper.changeEffective    : ==> Parameters: NO(String), 61948(Integer)
+2023-04-19 17:56:03.313 ERROR 17788 --- [XNIO-1 task-7] c.r.s.c.s.exception.ExceptionHandle      : 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'recordId' in 'where clause'
+### The error may exist in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: update signtable set effective = ? where recordId  =?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'recordId' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'recordId' in 'where clause'
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'recordId' in 'where clause'
+### The error may exist in file [D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes\mapper\AdminMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: update signtable set effective = ? where recordId  =?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'recordId' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'recordId' in 'where clause'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:234)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:74)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy64.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:287)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57)
+	at com.sun.proxy.$Proxy89.changeEffective(Unknown Source)
+	at com.rachel.service.service.impl.AdminServiceImpl.closeRecord(AdminServiceImpl.java:95)
+	at com.rachel.service.controller.admin.RecordController.closeRecord(RecordController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'recordId' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor42.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy106.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy104.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 101 common frames omitted
+
+2023-04-19 17:57:00.798  INFO 17788 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-19 17:57:00.805  INFO 17788 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-19 17:57:00.806  INFO 17788 --- [Thread-16] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-19 17:57:05.000  INFO 24768 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 24768 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-19 17:57:05.004  INFO 24768 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-19 17:57:05.059  INFO 24768 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-19 17:57:05.059  INFO 24768 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-19 17:57:07.021  WARN 24768 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-19 17:57:07.047  INFO 24768 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-19 17:57:07.048  INFO 24768 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1988 ms
+2023-04-19 17:57:08.151  INFO 24768 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@224b8f80, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b0323d1, org.springframework.security.web.header.HeaderWriterFilter@57cf6e21, org.springframework.web.filter.CorsFilter@45e27678, org.springframework.security.web.authentication.logout.LogoutFilter@75bfc886, com.rachel.service.configuration.spring.security.RestLoginAuthenticationFilter@506c044, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6a4d1b0b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18ba05b3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2dad9043, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@7513afe4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ded9fb1, org.springframework.security.web.session.SessionManagementFilter@2d511c8d, org.springframework.security.web.access.ExceptionTranslationFilter@50169915, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@add4398]
+2023-04-19 17:57:08.757  INFO 24768 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-19 17:57:08.819  INFO 24768 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-04-19 17:57:08.829  INFO 24768 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-04-19 17:57:08.897  INFO 24768 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-04-19 17:57:08.900  INFO 24768 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 4.499 seconds (JVM running for 5.948)
+2023-04-19 17:57:24.269  INFO 24768 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-19 17:57:24.269  INFO 24768 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-19 17:57:24.283  INFO 24768 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2023-04-19 17:57:24.402  INFO 24768 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-19 17:57:24.558  INFO 24768 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-19 17:57:24.566 DEBUG 24768 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:57:24.594 DEBUG 24768 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 17:57:24.619 DEBUG 24768 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:57:25.147 DEBUG 24768 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:57:25.147 DEBUG 24768 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 17:57:25.149 DEBUG 24768 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:57:25.171 DEBUG 24768 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 17:57:25.175 DEBUG 24768 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-19 17:57:25.15(Timestamp)
+2023-04-19 17:57:25.180 DEBUG 24768 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 17:57:33.439 DEBUG 24768 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 17:57:33.440 DEBUG 24768 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 17:57:33.442 DEBUG 24768 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 17:57:33.444 DEBUG 24768 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.changeEffective    : ==>  Preparing: update signtable set effective = ? where record_id =? 
+2023-04-19 17:57:33.444 DEBUG 24768 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.changeEffective    : ==> Parameters: NO(String), 61948(Integer)
+2023-04-19 17:57:33.449 DEBUG 24768 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.changeEffective    : <==    Updates: 1
+2023-04-19 17:57:58.984 DEBUG 24768 --- [XNIO-1 task-3] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:57:58.984 DEBUG 24768 --- [XNIO-1 task-3] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-19 17:57:58.986 DEBUG 24768 --- [XNIO-1 task-3] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:57:58.990 DEBUG 24768 --- [XNIO-1 task-3] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 17:57:58.991 DEBUG 24768 --- [XNIO-1 task-3] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2023-04-19 17:57:58.996 DEBUG 24768 --- [XNIO-1 task-3] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 17:57:58.997 DEBUG 24768 --- [XNIO-1 task-3] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 17:57:58.998 DEBUG 24768 --- [XNIO-1 task-3] r.c.r.s.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 登录了学之思开源考试系统(String), 2023-04-19 17:57:58.996(Timestamp)
+2023-04-19 17:57:59.007 DEBUG 24768 --- [XNIO-1 task-3] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 17:58:17.166 DEBUG 24768 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 17:58:17.167 DEBUG 24768 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 17:58:17.167 DEBUG 24768 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 17:58:17.168 DEBUG 24768 --- [XNIO-1 task-4] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 17:58:17.168 DEBUG 24768 --- [XNIO-1 task-4] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 61948(Integer)
+2023-04-19 17:58:17.169 DEBUG 24768 --- [XNIO-1 task-4] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 17:58:17.169 DEBUG 24768 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findStatues        : ==>  Preparing: select effective from signtable where record_id = ?; 
+2023-04-19 17:58:17.170 DEBUG 24768 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findStatues        : ==> Parameters: 61948(Integer)
+2023-04-19 17:58:17.171 DEBUG 24768 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findStatues        : <==      Total: 1
+2023-04-19 18:02:24.137  INFO 24768 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-19 18:02:24.147  INFO 24768 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-19 18:02:24.149  INFO 24768 --- [Thread-16] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-19 18:04:11.185  INFO 17700 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 17700 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-19 18:04:11.188  INFO 17700 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-19 18:04:11.233  INFO 17700 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-19 18:04:11.233  INFO 17700 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-19 18:04:13.219  WARN 17700 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-19 18:04:13.252  INFO 17700 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-19 18:04:13.252  INFO 17700 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2019 ms
+2023-04-19 18:04:14.340  INFO 17700 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4745baa1, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d6b9d8b, org.springframework.security.web.header.HeaderWriterFilter@1867d63c, org.springframework.web.filter.CorsFilter@4c19839a, org.springframework.security.web.authentication.logout.LogoutFilter@52fa84eb, com.rachel.service.configuration.spring.security.RestLoginAuthenticationFilter@3c4660b6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5989c29, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fd2dde5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73e33b1b, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@43e3a6f9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c0d59d8, org.springframework.security.web.session.SessionManagementFilter@3e136abc, org.springframework.security.web.access.ExceptionTranslationFilter@2183331, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5e5da81]
+2023-04-19 18:04:14.903  INFO 17700 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-19 18:04:14.964  INFO 17700 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-04-19 18:04:14.975  INFO 17700 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-04-19 18:04:15.039  INFO 17700 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-04-19 18:04:15.042  INFO 17700 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 4.522 seconds (JVM running for 5.777)
+2023-04-19 18:04:23.596  INFO 17700 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-19 18:04:23.596  INFO 17700 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-19 18:04:23.605  INFO 17700 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2023-04-19 18:04:23.725  INFO 17700 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-19 18:04:23.892  INFO 17700 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-19 18:04:23.900 DEBUG 17700 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 18:04:23.926 DEBUG 17700 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 18:04:23.953 DEBUG 17700 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 18:04:24.460 DEBUG 17700 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 18:04:24.460 DEBUG 17700 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 18:04:24.462 DEBUG 17700 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 18:04:24.481 DEBUG 17700 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 18:04:24.483 DEBUG 17700 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-19 18:04:24.462(Timestamp)
+2023-04-19 18:04:24.488 DEBUG 17700 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 18:04:44.818 DEBUG 17700 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 18:04:44.819 DEBUG 17700 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 18:04:44.820 DEBUG 17700 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 18:04:44.821 DEBUG 17700 --- [XNIO-1 task-2] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 18:04:44.821 DEBUG 17700 --- [XNIO-1 task-2] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 61948(Integer)
+2023-04-19 18:04:44.822 DEBUG 17700 --- [XNIO-1 task-2] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 18:04:44.823 DEBUG 17700 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 18:04:44.824 DEBUG 17700 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 18:04:44.825 DEBUG 17700 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 18:04:44.826 DEBUG 17700 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.getAllRecord       : ==>  Preparing: select student_name,statues,record_time from studentrecord where record_id = ?; 
+2023-04-19 18:04:44.826 DEBUG 17700 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.getAllRecord       : ==> Parameters: 61948(Integer)
+2023-04-19 18:04:44.829 DEBUG 17700 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.getAllRecord       : <==      Total: 2
+2023-04-19 18:05:00.899  INFO 17700 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-19 18:05:00.907  INFO 17700 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-19 18:05:00.909  INFO 17700 --- [Thread-17] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-19 19:16:36.061  INFO 27672 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 27672 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-19 19:16:36.064  INFO 27672 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-19 19:16:36.119  INFO 27672 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-19 19:16:36.119  INFO 27672 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-19 19:16:37.831  WARN 27672 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-19 19:16:37.854  INFO 27672 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-19 19:16:37.854  INFO 27672 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1735 ms
+2023-04-19 19:16:38.881  INFO 27672 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e6262f0, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ad1dc5c, org.springframework.security.web.header.HeaderWriterFilter@3ef6a01f, org.springframework.web.filter.CorsFilter@1b4f64bd, org.springframework.security.web.authentication.logout.LogoutFilter@1e73a26a, com.rachel.service.configuration.spring.security.RestLoginAuthenticationFilter@584d3d1d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@74523030, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d393f80, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5aa9d263, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@fb811da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e947b4f, org.springframework.security.web.session.SessionManagementFilter@663afff9, org.springframework.security.web.access.ExceptionTranslationFilter@39327ca1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2d4386ad]
+2023-04-19 19:16:39.460  INFO 27672 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-19 19:16:39.524  INFO 27672 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-04-19 19:16:39.533  INFO 27672 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-04-19 19:16:39.601  INFO 27672 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-04-19 19:16:39.605  INFO 27672 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 4.251 seconds (JVM running for 5.723)
+2023-04-19 19:17:10.337  INFO 27672 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-19 19:17:10.338  INFO 27672 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-19 19:17:10.344  INFO 27672 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-04-19 19:17:10.454  INFO 27672 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-19 19:17:10.573  INFO 27672 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-19 19:17:10.579 DEBUG 27672 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 19:17:10.604 DEBUG 27672 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 19:17:10.626 DEBUG 27672 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 19:17:11.203 DEBUG 27672 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 19:17:11.204 DEBUG 27672 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 19:17:11.205 DEBUG 27672 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 19:17:11.224 DEBUG 27672 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 19:17:11.226 DEBUG 27672 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-19 19:17:11.206(Timestamp)
+2023-04-19 19:17:11.238 DEBUG 27672 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 19:17:16.191 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:17:16.192 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:17:16.193 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:17:16.195 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findStatues        : ==>  Preparing: select effective from signtable where record_id = ?; 
+2023-04-19 19:17:16.195 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findStatues        : ==> Parameters: 61948(Integer)
+2023-04-19 19:17:16.196 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findStatues        : <==      Total: 1
+2023-04-19 19:17:16.196 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:17:16.197 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:17:16.198 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:17:16.198 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 19:17:16.199 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 61948(Integer)
+2023-04-19 19:17:16.202 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 19:17:16.204 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:17:16.204 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:17:16.206 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:17:16.207 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.getAllRecord       : ==>  Preparing: select student_name,statues,record_time from studentrecord where record_id = ?; 
+2023-04-19 19:17:16.207 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.getAllRecord       : ==> Parameters: 61948(Integer)
+2023-04-19 19:17:16.212 DEBUG 27672 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.getAllRecord       : <==      Total: 2
+2023-04-19 19:35:28.362 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:35:28.363 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:35:28.369 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:35:28.370 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findStatues        : ==>  Preparing: select effective from signtable where record_id = ?; 
+2023-04-19 19:35:28.370 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findStatues        : ==> Parameters: 61948(Integer)
+2023-04-19 19:35:28.371 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findStatues        : <==      Total: 1
+2023-04-19 19:35:28.371 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:35:28.371 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:35:28.372 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:35:28.373 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 19:35:28.373 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 61948(Integer)
+2023-04-19 19:35:28.374 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 19:35:28.374 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:35:28.375 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:35:28.375 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:35:28.376 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.getAllRecord       : ==>  Preparing: select student_name,statues,record_time from studentrecord where record_id = ?; 
+2023-04-19 19:35:28.376 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.getAllRecord       : ==> Parameters: 61948(Integer)
+2023-04-19 19:35:28.377 DEBUG 27672 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.getAllRecord       : <==      Total: 2
+2023-04-19 19:35:30.491 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:35:30.493 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:35:30.494 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:35:30.496 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findStatues        : ==>  Preparing: select effective from signtable where record_id = ?; 
+2023-04-19 19:35:30.496 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findStatues        : ==> Parameters: 61948(Integer)
+2023-04-19 19:35:30.500 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findStatues        : <==      Total: 1
+2023-04-19 19:35:30.502 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:35:30.502 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:35:30.503 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:35:30.504 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 19:35:30.504 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 61948(Integer)
+2023-04-19 19:35:30.505 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 19:35:30.506 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:35:30.506 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:35:30.507 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:35:30.508 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.getAllRecord       : ==>  Preparing: select student_name,statues,record_time from studentrecord where record_id = ?; 
+2023-04-19 19:35:30.508 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.getAllRecord       : ==> Parameters: 61948(Integer)
+2023-04-19 19:35:30.509 DEBUG 27672 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.getAllRecord       : <==      Total: 2
+2023-04-19 19:35:57.743  INFO 27672 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-19 19:35:57.751  INFO 27672 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-19 19:35:57.753  INFO 27672 --- [Thread-16] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-19 19:36:01.982  INFO 7444 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 7444 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-19 19:36:01.984  INFO 7444 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-19 19:36:02.029  INFO 7444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-19 19:36:02.029  INFO 7444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-19 19:36:03.706  WARN 7444 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-19 19:36:03.734  INFO 7444 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-19 19:36:03.734  INFO 7444 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1705 ms
+2023-04-19 19:36:04.853  INFO 7444 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5803aaf9, org.springframework.security.web.context.SecurityContextPersistenceFilter@63807655, org.springframework.security.web.header.HeaderWriterFilter@17684ff4, org.springframework.web.filter.CorsFilter@43796c78, org.springframework.security.web.authentication.logout.LogoutFilter@6f233f4, com.rachel.service.configuration.spring.security.RestLoginAuthenticationFilter@5db11aa8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@45878ce3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54d8c332, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44539abc, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@7ad13b9d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d13518d, org.springframework.security.web.session.SessionManagementFilter@5606ce4d, org.springframework.security.web.access.ExceptionTranslationFilter@76651ad1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35efb451]
+2023-04-19 19:36:05.547  INFO 7444 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-19 19:36:05.678  INFO 7444 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-04-19 19:36:05.694  INFO 7444 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-04-19 19:36:05.810  INFO 7444 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-04-19 19:36:05.814  INFO 7444 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 4.417 seconds (JVM running for 5.779)
+2023-04-19 19:36:17.545  INFO 7444 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-19 19:36:17.545  INFO 7444 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-19 19:36:17.554  INFO 7444 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2023-04-19 19:36:17.674  INFO 7444 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-19 19:36:17.816  INFO 7444 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-19 19:36:17.825 DEBUG 7444 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 19:36:17.849 DEBUG 7444 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 19:36:17.874 DEBUG 7444 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 19:36:18.385 DEBUG 7444 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 19:36:18.387 DEBUG 7444 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 19:36:18.389 DEBUG 7444 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 19:36:18.407 DEBUG 7444 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 19:36:18.409 DEBUG 7444 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-19 19:36:18.389(Timestamp)
+2023-04-19 19:36:18.414 DEBUG 7444 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 19:36:29.896 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:36:29.896 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:36:29.899 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:36:29.900 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findStatues        : ==>  Preparing: select effective from signtable where record_id = ?; 
+2023-04-19 19:36:29.901 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findStatues        : ==> Parameters: 61948(Integer)
+2023-04-19 19:36:29.902 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findStatues        : <==      Total: 1
+2023-04-19 19:36:29.903 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:36:29.903 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:36:29.905 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:36:29.906 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 19:36:29.906 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 61948(Integer)
+2023-04-19 19:36:29.907 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 19:36:29.908 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:36:29.908 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:36:29.909 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:36:29.911 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.getAllRecord       : ==>  Preparing: select student_name,statues,record_time from studentrecord where record_id = ?; 
+2023-04-19 19:36:29.911 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.getAllRecord       : ==> Parameters: 61948(Integer)
+2023-04-19 19:36:29.916 DEBUG 7444 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.getAllRecord       : <==      Total: 2
+2023-04-19 19:36:48.246  INFO 7444 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-19 19:36:48.253  INFO 7444 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-19 19:36:48.255  INFO 7444 --- [Thread-14] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-19 19:37:18.680  INFO 17240 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 17240 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-19 19:37:18.684  INFO 17240 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-19 19:37:18.728  INFO 17240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-19 19:37:18.728  INFO 17240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-19 19:37:20.490  WARN 17240 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-19 19:37:20.516  INFO 17240 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-19 19:37:20.516  INFO 17240 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1788 ms
+2023-04-19 19:37:21.581  INFO 17240 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51f5db98, org.springframework.security.web.context.SecurityContextPersistenceFilter@68328642, org.springframework.security.web.header.HeaderWriterFilter@540d828d, org.springframework.web.filter.CorsFilter@4d31adf3, org.springframework.security.web.authentication.logout.LogoutFilter@28a1d6ba, com.rachel.service.configuration.spring.security.RestLoginAuthenticationFilter@5d17ebf6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7dec9f44, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58047ab5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42d343d3, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@11a83e2f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49fabc2d, org.springframework.security.web.session.SessionManagementFilter@5f7dccbc, org.springframework.security.web.access.ExceptionTranslationFilter@1ba6fb20, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5cd42c24]
+2023-04-19 19:37:22.158  INFO 17240 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-19 19:37:22.216  INFO 17240 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-04-19 19:37:22.229  INFO 17240 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-04-19 19:37:22.300  INFO 17240 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-04-19 19:37:22.304  INFO 17240 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 4.298 seconds (JVM running for 5.665)
+2023-04-19 19:37:27.477  INFO 17240 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-19 19:37:27.477  INFO 17240 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-19 19:37:27.487  INFO 17240 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2023-04-19 19:37:27.581  INFO 17240 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-19 19:37:27.728  INFO 17240 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-19 19:37:27.739 DEBUG 17240 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 19:37:27.766 DEBUG 17240 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 19:37:27.794 DEBUG 17240 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 19:37:28.320 DEBUG 17240 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 19:37:28.321 DEBUG 17240 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 19:37:28.322 DEBUG 17240 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 19:37:28.342 DEBUG 17240 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 19:37:28.344 DEBUG 17240 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-19 19:37:28.323(Timestamp)
+2023-04-19 19:37:28.357 DEBUG 17240 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 19:37:55.328 DEBUG 17240 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertTable        : ==>  Preparing: INSERT INTO signtable ( record_id,course_id,token, teacher_id,publish_time,effective) VALUES ( ?, ?,?,?,?,?) 
+2023-04-19 19:37:55.329 DEBUG 17240 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertTable        : ==> Parameters: 52334(Integer), 123456(Integer), 4053(Integer), 2(Integer), 2023-04-19T19:37:55.327(LocalDateTime), YES(String)
+2023-04-19 19:37:55.336 DEBUG 17240 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertTable        : <==    Updates: 1
+2023-04-19 19:37:55.337 DEBUG 17240 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findBycourseId     : ==>  Preparing: select * from course where course_id = ?; 
+2023-04-19 19:37:55.337 DEBUG 17240 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findBycourseId     : ==> Parameters: 123456(Integer)
+2023-04-19 19:37:55.339 DEBUG 17240 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findBycourseId     : <==      Total: 2
+2023-04-19 19:37:55.340 DEBUG 17240 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==>  Preparing: insert into studentrecord(record_id,course_id,student_id,student_name,record_time,statues,role) values (?,?,?,?,?,?,?) 
+2023-04-19 19:37:55.340 DEBUG 17240 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==> Parameters: 52334(Integer), 123456(Integer), 1(Integer), student(String), null, FALSE(String), 1(Integer)
+2023-04-19 19:37:55.344 DEBUG 17240 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : <==    Updates: 1
+2023-04-19 19:37:55.344 DEBUG 17240 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==>  Preparing: insert into studentrecord(record_id,course_id,student_id,student_name,record_time,statues,role) values (?,?,?,?,?,?,?) 
+2023-04-19 19:37:55.345 DEBUG 17240 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==> Parameters: 52334(Integer), 123456(Integer), 3(Integer), Rachel(String), null, FALSE(String), 1(Integer)
+2023-04-19 19:37:55.351 DEBUG 17240 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : <==    Updates: 1
+2023-04-19 19:38:23.014 DEBUG 17240 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:38:23.015 DEBUG 17240 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:38:23.017 DEBUG 17240 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:38:23.017 DEBUG 17240 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.changeEffective    : ==>  Preparing: update signtable set effective = ? where record_id =? 
+2023-04-19 19:38:23.018 DEBUG 17240 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.changeEffective    : ==> Parameters: NO(String), 52334(Integer)
+2023-04-19 19:38:23.022 DEBUG 17240 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.changeEffective    : <==    Updates: 1
+2023-04-19 19:38:32.258 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:38:32.259 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:38:32.260 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:38:32.260 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findStatues        : ==>  Preparing: select effective from signtable where record_id = ?; 
+2023-04-19 19:38:32.261 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findStatues        : ==> Parameters: 52334(Integer)
+2023-04-19 19:38:32.263 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findStatues        : <==      Total: 1
+2023-04-19 19:38:32.265 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:38:32.265 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:38:32.266 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:38:32.268 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 19:38:32.268 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 52334(Integer)
+2023-04-19 19:38:32.269 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 19:38:32.270 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:38:32.270 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:38:32.271 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:38:32.271 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.getAllRecord       : ==>  Preparing: select student_name,statues,record_time from studentrecord where record_id = ?; 
+2023-04-19 19:38:32.272 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.getAllRecord       : ==> Parameters: 52334(Integer)
+2023-04-19 19:38:32.275 DEBUG 17240 --- [XNIO-1 task-4] r.c.r.s.r.AdminMapper.getAllRecord       : <==      Total: 2
+2023-04-19 19:39:49.482  INFO 17240 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-19 19:39:49.488  INFO 17240 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-19 19:39:49.491  INFO 17240 --- [Thread-16] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-19 19:39:53.824  INFO 26248 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 26248 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-19 19:39:53.827  INFO 26248 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-19 19:39:53.874  INFO 26248 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-19 19:39:53.874  INFO 26248 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-19 19:39:55.658  WARN 26248 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-19 19:39:55.680  INFO 26248 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-19 19:39:55.680  INFO 26248 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1806 ms
+2023-04-19 19:39:56.735  INFO 26248 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e0668f8, org.springframework.security.web.context.SecurityContextPersistenceFilter@69aea5e0, org.springframework.security.web.header.HeaderWriterFilter@cb03af8, org.springframework.web.filter.CorsFilter@2d4386ad, org.springframework.security.web.authentication.logout.LogoutFilter@c4dccc7, com.rachel.service.configuration.spring.security.RestLoginAuthenticationFilter@7e2c7c4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@220a3a41, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3886f736, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c4745a4, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@ace93e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fd644af, org.springframework.security.web.session.SessionManagementFilter@5fb35c34, org.springframework.security.web.access.ExceptionTranslationFilter@673e9553, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@162e7710]
+2023-04-19 19:39:57.348  INFO 26248 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-19 19:39:57.419  INFO 26248 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-04-19 19:39:57.427  INFO 26248 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-04-19 19:39:57.493  INFO 26248 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-04-19 19:39:57.496  INFO 26248 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 4.437 seconds (JVM running for 5.827)
+2023-04-19 19:40:10.076  INFO 26248 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-19 19:40:10.076  INFO 26248 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-19 19:40:10.086  INFO 26248 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2023-04-19 19:40:10.193  INFO 26248 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-19 19:40:10.336  INFO 26248 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-19 19:40:10.345 DEBUG 26248 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 19:40:10.370 DEBUG 26248 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 19:40:10.394 DEBUG 26248 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 19:40:10.972 DEBUG 26248 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 19:40:10.973 DEBUG 26248 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 19:40:10.974 DEBUG 26248 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 19:40:10.992 DEBUG 26248 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 19:40:10.994 DEBUG 26248 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-19 19:40:10.974(Timestamp)
+2023-04-19 19:40:10.999 DEBUG 26248 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 19:40:33.077 DEBUG 26248 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertTable        : ==>  Preparing: INSERT INTO signtable ( record_id,course_id,token, teacher_id,publish_time,effective) VALUES ( ?, ?,?,?,?,?) 
+2023-04-19 19:40:33.078 DEBUG 26248 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertTable        : ==> Parameters: 64139(Integer), 123456(Integer), 4883(Integer), 2(Integer), 2023-04-19T19:40:33.076(LocalDateTime), YES(String)
+2023-04-19 19:40:33.083 DEBUG 26248 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertTable        : <==    Updates: 1
+2023-04-19 19:40:33.085 DEBUG 26248 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findBycourseId     : ==>  Preparing: select * from course where course_id = ?; 
+2023-04-19 19:40:33.086 DEBUG 26248 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findBycourseId     : ==> Parameters: 123456(Integer)
+2023-04-19 19:40:33.088 DEBUG 26248 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findBycourseId     : <==      Total: 2
+2023-04-19 19:40:33.089 DEBUG 26248 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==>  Preparing: insert into studentrecord(record_id,course_id,student_id,student_name,record_time,statues,role) values (?,?,?,?,?,?,?) 
+2023-04-19 19:40:33.089 DEBUG 26248 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==> Parameters: 64139(Integer), 123456(Integer), 1(Integer), student(String), null, FALSE(String), 1(Integer)
+2023-04-19 19:40:33.093 DEBUG 26248 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : <==    Updates: 1
+2023-04-19 19:40:33.094 DEBUG 26248 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==>  Preparing: insert into studentrecord(record_id,course_id,student_id,student_name,record_time,statues,role) values (?,?,?,?,?,?,?) 
+2023-04-19 19:40:33.095 DEBUG 26248 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==> Parameters: 64139(Integer), 123456(Integer), 3(Integer), Rachel(String), null, FALSE(String), 1(Integer)
+2023-04-19 19:40:33.101 DEBUG 26248 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : <==    Updates: 1
+2023-04-19 19:40:41.269 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:40:41.269 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:40:41.270 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:40:41.271 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findStatues        : ==>  Preparing: select effective from signtable where record_id = ?; 
+2023-04-19 19:40:41.271 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findStatues        : ==> Parameters: 64139(Integer)
+2023-04-19 19:40:41.272 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findStatues        : <==      Total: 1
+2023-04-19 19:40:41.273 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:40:41.273 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:40:41.275 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:40:41.275 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 19:40:41.276 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 64139(Integer)
+2023-04-19 19:40:41.277 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 19:40:41.278 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:40:41.278 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:40:41.280 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:40:41.281 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.getAllRecord       : ==>  Preparing: select student_name,statues,record_time from studentrecord where record_id = ?; 
+2023-04-19 19:40:41.282 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.getAllRecord       : ==> Parameters: 64139(Integer)
+2023-04-19 19:40:41.288 DEBUG 26248 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.getAllRecord       : <==      Total: 2
+2023-04-19 19:43:10.034  INFO 26248 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-19 19:43:10.040  INFO 26248 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-19 19:43:10.041  INFO 26248 --- [Thread-16] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-19 19:43:15.443  INFO 28300 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 28300 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-04-19 19:43:15.445  INFO 28300 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-04-19 19:43:15.496  INFO 28300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-19 19:43:15.496  INFO 28300 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-19 19:43:17.236  WARN 28300 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-04-19 19:43:17.260  INFO 28300 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-04-19 19:43:17.261  INFO 28300 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1764 ms
+2023-04-19 19:43:18.251  INFO 28300 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f64656, org.springframework.security.web.context.SecurityContextPersistenceFilter@335fc950, org.springframework.security.web.header.HeaderWriterFilter@1f12e232, org.springframework.web.filter.CorsFilter@7a3ed87, org.springframework.security.web.authentication.logout.LogoutFilter@74a85846, com.rachel.service.configuration.spring.security.RestLoginAuthenticationFilter@70ea8407, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7df93ef7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c3204f6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67c507a8, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@3900b90b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19087f8b, org.springframework.security.web.session.SessionManagementFilter@6c5c1dc2, org.springframework.security.web.access.ExceptionTranslationFilter@260f9134, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@137e3231]
+2023-04-19 19:43:18.816  INFO 28300 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-19 19:43:18.877  INFO 28300 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-04-19 19:43:18.886  INFO 28300 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-04-19 19:43:18.950  INFO 28300 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-04-19 19:43:18.954  INFO 28300 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 4.161 seconds (JVM running for 5.534)
+2023-04-19 19:43:24.658  INFO 28300 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-19 19:43:24.658  INFO 28300 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-19 19:43:24.668  INFO 28300 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2023-04-19 19:43:24.762  INFO 28300 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-19 19:43:24.892  INFO 28300 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-19 19:43:24.898 DEBUG 28300 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 19:43:24.922 DEBUG 28300 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 19:43:24.952 DEBUG 28300 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 19:43:25.503 DEBUG 28300 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-04-19 19:43:25.504 DEBUG 28300 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-04-19 19:43:25.513 DEBUG 28300 --- [XNIO-1 task-1] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-04-19 19:43:25.544 DEBUG 28300 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-04-19 19:43:25.548 DEBUG 28300 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2023-04-19 19:43:25.514(Timestamp)
+2023-04-19 19:43:25.553 DEBUG 28300 --- [XNIO-1 task-1] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-04-19 19:43:46.060 DEBUG 28300 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertTable        : ==>  Preparing: INSERT INTO signtable ( record_id,course_id,token, teacher_id,publish_time,effective) VALUES ( ?, ?,?,?,?,?) 
+2023-04-19 19:43:46.062 DEBUG 28300 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertTable        : ==> Parameters: 38698(Integer), 123456(Integer), 2963(Integer), 2(Integer), 2023-04-19T19:43:46.059(LocalDateTime), YES(String)
+2023-04-19 19:43:46.069 DEBUG 28300 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertTable        : <==    Updates: 1
+2023-04-19 19:43:46.069 DEBUG 28300 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findBycourseId     : ==>  Preparing: select * from course where course_id = ?; 
+2023-04-19 19:43:46.069 DEBUG 28300 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findBycourseId     : ==> Parameters: 123456(Integer)
+2023-04-19 19:43:46.071 DEBUG 28300 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.findBycourseId     : <==      Total: 2
+2023-04-19 19:43:46.072 DEBUG 28300 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==>  Preparing: insert into studentrecord(record_id,course_id,student_id,student_name,record_time,statues,role) values (?,?,?,?,?,?,?) 
+2023-04-19 19:43:46.072 DEBUG 28300 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==> Parameters: 38698(Integer), 123456(Integer), 1(Integer), student(String), null, FALSE(String), 1(Integer)
+2023-04-19 19:43:46.077 DEBUG 28300 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : <==    Updates: 1
+2023-04-19 19:43:46.077 DEBUG 28300 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==>  Preparing: insert into studentrecord(record_id,course_id,student_id,student_name,record_time,statues,role) values (?,?,?,?,?,?,?) 
+2023-04-19 19:43:46.078 DEBUG 28300 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : ==> Parameters: 38698(Integer), 123456(Integer), 3(Integer), Rachel(String), null, FALSE(String), 1(Integer)
+2023-04-19 19:43:46.082 DEBUG 28300 --- [XNIO-1 task-2] r.c.r.s.r.AdminMapper.insertRecord       : <==    Updates: 1
+2023-04-19 19:43:51.560 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:43:51.560 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:43:51.562 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:43:51.562 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findStatues        : ==>  Preparing: select effective from signtable where record_id = ?; 
+2023-04-19 19:43:51.563 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findStatues        : ==> Parameters: 38698(Integer)
+2023-04-19 19:43:51.564 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findStatues        : <==      Total: 1
+2023-04-19 19:43:51.565 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:43:51.565 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:43:51.566 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:43:51.566 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 19:43:51.568 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 38698(Integer)
+2023-04-19 19:43:51.570 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 19:43:51.570 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:43:51.571 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:43:51.572 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:43:51.572 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.getAllRecord       : ==>  Preparing: select student_name,statues,record_time from studentrecord where record_id = ?; 
+2023-04-19 19:43:51.572 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.getAllRecord       : ==> Parameters: 38698(Integer)
+2023-04-19 19:43:51.575 DEBUG 28300 --- [XNIO-1 task-3] r.c.r.s.r.AdminMapper.getAllRecord       : <==      Total: 2
+2023-04-19 19:44:24.701 ERROR 28300 --- [XNIO-1 task-5] c.r.s.c.s.exception.ExceptionHandle      : JSON parse error: Unexpected character ('/' (code 47)): maybe a (non-standard) comment? (not recognized as one since Feature 'ALLOW_COMMENTS' not enabled for parser); nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('/' (code 47)): maybe a (non-standard) comment? (not recognized as one since Feature 'ALLOW_COMMENTS' not enabled for parser)
+ at [Source: (PushbackInputStream); line: 1, column: 2]
+
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('/' (code 47)): maybe a (non-standard) comment? (not recognized as one since Feature 'ALLOW_COMMENTS' not enabled for parser); nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('/' (code 47)): maybe a (non-standard) comment? (not recognized as one since Feature 'ALLOW_COMMENTS' not enabled for parser)
+ at [Source: (PushbackInputStream); line: 1, column: 2]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:245)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:227)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:204)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:157)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:130)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:126)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('/' (code 47)): maybe a (non-standard) comment? (not recognized as one since Feature 'ALLOW_COMMENTS' not enabled for parser)
+ at [Source: (PushbackInputStream); line: 1, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1804)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:693)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:591)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipComment(UTF8StreamJsonParser.java:3104)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipWSOrEnd2(UTF8StreamJsonParser.java:2984)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipWSOrEnd(UTF8StreamJsonParser.java:2940)
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:691)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4141)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4000)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3084)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:239)
+	... 95 common frames omitted
+
+2023-04-19 19:44:35.460 DEBUG 28300 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:44:35.460 DEBUG 28300 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:44:35.461 DEBUG 28300 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:44:35.463 DEBUG 28300 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.changeEffective    : ==>  Preparing: update signtable set effective = ? where record_id =? 
+2023-04-19 19:44:35.463 DEBUG 28300 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.changeEffective    : ==> Parameters: NO(String), 38698(Integer)
+2023-04-19 19:44:35.470 DEBUG 28300 --- [XNIO-1 task-6] r.c.r.s.r.AdminMapper.changeEffective    : <==    Updates: 1
+2023-04-19 19:44:57.776 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:44:57.776 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:44:57.777 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:44:57.778 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.AdminMapper.findStatues        : ==>  Preparing: select effective from signtable where record_id = ?; 
+2023-04-19 19:44:57.779 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.AdminMapper.findStatues        : ==> Parameters: 38698(Integer)
+2023-04-19 19:44:57.780 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.AdminMapper.findStatues        : <==      Total: 1
+2023-04-19 19:44:57.781 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:44:57.782 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:44:57.784 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:44:57.785 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.A.findTokenByRecordId          : ==>  Preparing: select token from signtable where record_id = ?; 
+2023-04-19 19:44:57.785 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.A.findTokenByRecordId          : ==> Parameters: 38698(Integer)
+2023-04-19 19:44:57.786 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.A.findTokenByRecordId          : <==      Total: 1
+2023-04-19 19:44:57.787 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.AdminMapper.findRecordId       : ==>  Preparing: select record_id from signtable order by publish_time desc limit 1; 
+2023-04-19 19:44:57.787 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.AdminMapper.findRecordId       : ==> Parameters: 
+2023-04-19 19:44:57.788 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.AdminMapper.findRecordId       : <==      Total: 1
+2023-04-19 19:44:57.789 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.AdminMapper.getAllRecord       : ==>  Preparing: select student_name,statues,record_time from studentrecord where record_id = ?; 
+2023-04-19 19:44:57.789 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.AdminMapper.getAllRecord       : ==> Parameters: 38698(Integer)
+2023-04-19 19:44:57.791 DEBUG 28300 --- [XNIO-1 task-8] r.c.r.s.r.AdminMapper.getAllRecord       : <==      Total: 2
+2023-04-19 19:45:05.869  INFO 28300 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-19 19:45:05.876  INFO 28300 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-19 19:45:05.879  INFO 28300 --- [Thread-16] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'

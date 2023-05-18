@@ -29,11 +29,13 @@ public class TaskExamCustomerAnswerImpl extends BaseServiceImpl<TaskExamCustomer
         this.textContentService = textContentService;
     }
 
+    //更新或者插入新的任务试卷组合结构，并且序列化
     @Override
     public void insertOrUpdate(ExamPaper examPaper, ExamPaperAnswer examPaperAnswer, Date now) {
         Integer taskId = examPaper.getTaskExamId();
         Integer userId = examPaperAnswer.getCreateUser();
         TaskExamCustomerAnswer taskExamCustomerAnswer = taskExamCustomerAnswerMapper.getByTUid(taskId, userId);
+        //如果没有，就插入
         if (null == taskExamCustomerAnswer) {
             taskExamCustomerAnswer = new TaskExamCustomerAnswer();
             taskExamCustomerAnswer.setCreateTime(now);
@@ -44,7 +46,7 @@ public class TaskExamCustomerAnswerImpl extends BaseServiceImpl<TaskExamCustomer
             textContentService.insertByFilter(textContent);
             taskExamCustomerAnswer.setTextContentId(textContent.getId());
             insertByFilter(taskExamCustomerAnswer);
-        } else {
+        } else {   //有那就更新
             TextContent textContent = textContentService.selectById(taskExamCustomerAnswer.getTextContentId());
             List<TaskItemAnswerObject> taskItemAnswerObjects = JsonUtil.toJsonListObject(textContent.getContent(), TaskItemAnswerObject.class);
             taskItemAnswerObjects.add(new TaskItemAnswerObject(examPaperAnswer.getExamPaperId(), examPaperAnswer.getId(), examPaperAnswer.getStatus()));

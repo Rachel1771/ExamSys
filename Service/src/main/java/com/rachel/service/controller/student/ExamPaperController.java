@@ -26,7 +26,9 @@ public class ExamPaperController extends BaseApiController {
     private final ApplicationEventPublisher eventPublisher;
 
     @Autowired
-    public ExamPaperController(ExamPaperService examPaperService, ExamPaperAnswerService examPaperAnswerService, ApplicationEventPublisher eventPublisher) {
+    public ExamPaperController(ExamPaperService examPaperService, 
+        ExamPaperAnswerService examPaperAnswerService, ApplicationEventPublisher eventPublisher) {
+
         this.examPaperService = examPaperService;
         this.examPaperAnswerService = examPaperAnswerService;
         this.eventPublisher = eventPublisher;

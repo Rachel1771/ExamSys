@@ -43,6 +43,7 @@ public class ExamPaperAnswerController extends BaseApiController {
     }
 
 
+    //处理答卷，展示
     @RequestMapping(value = "/pageList", method = RequestMethod.POST)
     public RestResponse<PageInfo<ExamPaperAnswerPageResponseVM>> pageList(@RequestBody @Valid ExamPaperAnswerPageVM model) {
         model.setCreateUser(getCurrentUser().getId());
@@ -61,7 +62,7 @@ public class ExamPaperAnswerController extends BaseApiController {
         return RestResponse.ok(page);
     }
 
-
+    //提交试卷，同时Service中会改卷
     @RequestMapping(value = "/answerSubmit", method = RequestMethod.POST)
     public RestResponse answerSubmit(@RequestBody @Valid ExamPaperSubmitVM examPaperSubmitVM) {
         User user = getCurrentUser();
@@ -82,7 +83,7 @@ public class ExamPaperAnswerController extends BaseApiController {
         return RestResponse.ok(scoreVm);
     }
 
-
+    //处理批改问题
     @RequestMapping(value = "/edit", method = RequestMethod.POST)
     public RestResponse edit(@RequestBody @Valid ExamPaperSubmitVM examPaperSubmitVM) {
         boolean notJudge = examPaperSubmitVM.getAnswerItems().stream().anyMatch(i -> i.getDoRight() == null && i.getScore() == null);
@@ -104,6 +105,7 @@ public class ExamPaperAnswerController extends BaseApiController {
         return RestResponse.ok(score);
     }
 
+    //查看试卷
     @RequestMapping(value = "/read/{id}", method = RequestMethod.POST)
     public RestResponse<ExamPaperReadVM> read(@PathVariable Integer id) {
         ExamPaperAnswer examPaperAnswer = examPaperAnswerService.selectById(id);

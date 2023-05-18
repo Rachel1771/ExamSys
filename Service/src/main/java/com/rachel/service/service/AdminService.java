@@ -40,4 +40,6 @@ public interface AdminService {
 
     void closeRecord();
 
+    Boolean getStatues();
+
 }

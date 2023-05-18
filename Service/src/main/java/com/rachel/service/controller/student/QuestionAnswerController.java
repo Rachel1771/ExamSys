@@ -40,6 +40,7 @@ public class QuestionAnswerController extends BaseApiController {
         this.subjectService = subjectService;
     }
 
+    //错题本
     @RequestMapping(value = "/page", method = RequestMethod.POST)
     public RestResponse<PageInfo<QuestionPageStudentResponseVM>> pageList(@RequestBody QuestionPageStudentRequestVM model) {
         model.setCreateUser(getCurrentUser().getId());
@@ -58,7 +59,7 @@ public class QuestionAnswerController extends BaseApiController {
         return RestResponse.ok(page);
     }
 
-
+    //错题详情
     @RequestMapping(value = "/select/{id}", method = RequestMethod.POST)
     public RestResponse<QuestionAnswerVM> select(@PathVariable Integer id) {
         QuestionAnswerVM vm = new QuestionAnswerVM();

@@ -16,6 +16,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Date;
 import java.util.List;
 
+
+//消息处理模块
 @Service
 public class MessageServiceImpl implements MessageService {
 

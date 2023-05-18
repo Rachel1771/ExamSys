@@ -46,7 +46,7 @@ public class RecordController extends BaseApiController {
         if (temp == 1) {
             return RestResponse.ok();
         }
-        else if(temp == 1){
+        else if(temp == 2){
             return RestResponse.fail(202, "签到码错误");
         }
         else{

@@ -6,12 +6,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 
-/**
- * @version 3.3.0
- * @description: The enum System code.
- * Copyright (C), 2020-2021, 武汉思维跳跃科技有限公司
- * @date 2021/5/25 10:45
- */
+
 @Component
 public class WxContext {
 

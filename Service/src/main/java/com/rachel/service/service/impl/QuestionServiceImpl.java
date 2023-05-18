@@ -54,7 +54,7 @@ public class QuestionServiceImpl extends BaseServiceImpl<Question> implements Qu
 
 
     @Override
-    @Transactional
+    @Transactional     //从VM那里把题目信息拿过来，新建题目
     public Question insertFullQuestion(QuestionEditRequestVM model, Integer userId) {
         Date now = new Date();
         Integer gradeLevel = subjectService.levelBySubjectId(model.getSubjectId());
@@ -81,6 +81,7 @@ public class QuestionServiceImpl extends BaseServiceImpl<Question> implements Qu
         return question;
     }
 
+    //更新题目信息
     @Override
     @Transactional
     public Question updateFullQuestion(QuestionEditRequestVM model) {
@@ -101,13 +102,16 @@ public class QuestionServiceImpl extends BaseServiceImpl<Question> implements Qu
         return question;
     }
 
-    @Override
+
+    //根据题目ID查询返回VM
+    @Override 
     public QuestionEditRequestVM getQuestionEditRequestVM(Integer questionId) {
         //题目映射
         Question question = questionMapper.selectByPrimaryKey(questionId);
         return getQuestionEditRequestVM(question);
     }
 
+    //根据题目内容查询返回VM
     @Override
     public QuestionEditRequestVM getQuestionEditRequestVM(Question question) {
         //题目映射
@@ -116,7 +120,7 @@ public class QuestionServiceImpl extends BaseServiceImpl<Question> implements Qu
         QuestionEditRequestVM questionEditRequestVM = modelMapper.map(question, QuestionEditRequestVM.class);
         questionEditRequestVM.setTitle(questionObject.getTitleContent());
 
-        //答案
+        //题目类型不同，答案不一样
         QuestionTypeEnum questionTypeEnum = QuestionTypeEnum.fromCode(question.getQuestionType());
         switch (questionTypeEnum) {
             case SingleChoice:
@@ -152,6 +156,7 @@ public class QuestionServiceImpl extends BaseServiceImpl<Question> implements Qu
         return questionEditRequestVM;
     }
 
+    //将VM序列化为JSON存到infoTextContent
     public void setQuestionInfoFromVM(TextContent infoTextContent, QuestionEditRequestVM model) {
         List<QuestionItemObject> itemObjects = model.getItems().stream().map(i ->
                 {

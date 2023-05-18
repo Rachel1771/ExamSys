@@ -54,19 +54,20 @@ public class ExamPaperAnswerServiceImpl extends BaseServiceImpl<ExamPaperAnswer>
         this.taskExamCustomerAnswerMapper = taskExamCustomerAnswerMapper;
     }
 
+    //学生分页查询卷题
     @Override
     public PageInfo<ExamPaperAnswer> studentPage(ExamPaperAnswerPageVM requestVM) {
         return PageHelper.startPage(requestVM.getPageIndex(), requestVM.getPageSize(), "id desc").doSelectPageInfo(() ->
                 examPaperAnswerMapper.studentPage(requestVM));
     }
 
-
+    //通过前端的VM模型，获取到试卷，学生答卷，和该卷答案信息，组合成一个examPaperAnswerInfo类
     @Override
     public ExamPaperAnswerInfo calculateExamPaperAnswer(ExamPaperSubmitVM examPaperSubmitVM, User user) {
         ExamPaperAnswerInfo examPaperAnswerInfo = new ExamPaperAnswerInfo();
         Date now = new Date();
-        ExamPaper examPaper = examPaperMapper.selectByPrimaryKey(examPaperSubmitVM.getId());
-        ExamPaperTypeEnum paperTypeEnum = ExamPaperTypeEnum.fromCode(examPaper.getPaperType());
+        ExamPaper examPaper = examPaperMapper.selectByPrimaryKey(examPaperSubmitVM.getId());  //前端获取ID
+        ExamPaperTypeEnum paperTypeEnum = ExamPaperTypeEnum.fromCode(examPaper.getPaperType());  //卷子类型获取
         //任务试卷只能做一次
         if (paperTypeEnum == ExamPaperTypeEnum.Task) {
             ExamPaperAnswer examPaperAnswer = examPaperAnswerMapper.getByPidUid(examPaperSubmitVM.getId(), user.getId());
@@ -82,7 +83,7 @@ public class ExamPaperAnswerServiceImpl extends BaseServiceImpl<ExamPaperAnswer>
                 .flatMap(t -> t.getQuestionItems().stream()
                         .map(q -> {
                             Question question = questions.stream().filter(tq -> tq.getId().equals(q.getId())).findFirst().get();
-                            ExamPaperSubmitItemVM customerQuestionAnswer = examPaperSubmitVM.getAnswerItems().stream()
+                            ExamPaperSubmitItemVM customerQuestionAnswer = examPaperSubmitVM.getAnswerItems().stream()   //将提交的答案流，转换成customerQuestionAnswer对象
                                     .filter(tq -> tq.getQuestionId().equals(q.getId()))
                                     .findFirst()
                                     .orElse(null);
@@ -97,6 +98,8 @@ public class ExamPaperAnswerServiceImpl extends BaseServiceImpl<ExamPaperAnswer>
         return examPaperAnswerInfo;
     }
 
+
+    //改卷模块
     @Override
     @Transactional
     public String judge(ExamPaperSubmitVM examPaperSubmitVM) {
@@ -105,21 +108,22 @@ public class ExamPaperAnswerServiceImpl extends BaseServiceImpl<ExamPaperAnswer>
         List<ExamPaperAnswerUpdate> examPaperAnswerUpdates = new ArrayList<>(judgeItems.size());
         Integer customerScore = examPaperAnswer.getUserScore();
         Integer questionCorrect = examPaperAnswer.getQuestionCorrect();
+        //改卷循环
         for (ExamPaperSubmitItemVM d : judgeItems) {
-            ExamPaperAnswerUpdate examPaperAnswerUpdate = new ExamPaperAnswerUpdate();
+            ExamPaperAnswerUpdate examPaperAnswerUpdate = new ExamPaperAnswerUpdate();  //存储题目ID、学生得分和题目分数
             examPaperAnswerUpdate.setId(d.getId());
             examPaperAnswerUpdate.setCustomerScore(ExamUtil.scoreFromVM(d.getScore()));
             boolean doRight = examPaperAnswerUpdate.getCustomerScore().equals(ExamUtil.scoreFromVM(d.getQuestionScore()));
             examPaperAnswerUpdate.setDoRight(doRight);
             examPaperAnswerUpdates.add(examPaperAnswerUpdate);
             customerScore += examPaperAnswerUpdate.getCustomerScore();
-            if (examPaperAnswerUpdate.getDoRight()) {
+            if (examPaperAnswerUpdate.getDoRight()) {   
                 ++questionCorrect;
             }
         }
-        examPaperAnswer.setUserScore(customerScore);
+        examPaperAnswer.setUserScore(customerScore);    
         examPaperAnswer.setQuestionCorrect(questionCorrect);
-        examPaperAnswer.setStatus(ExamPaperAnswerStatusEnum.Complete.getCode());
+        examPaperAnswer.setStatus(ExamPaperAnswerStatusEnum.Complete.getCode());  //答卷的状态
         examPaperAnswerMapper.updateByPrimaryKeySelective(examPaperAnswer);
         examPaperQuestionCustomerAnswerService.updateScore(examPaperAnswerUpdates);
 
@@ -145,6 +149,7 @@ public class ExamPaperAnswerServiceImpl extends BaseServiceImpl<ExamPaperAnswer>
         return ExamUtil.scoreToVM(customerScore);
     }
 
+    //答卷转化成VM
     @Override
     public ExamPaperSubmitVM examPaperAnswerToVM(Integer id) {
         ExamPaperSubmitVM examPaperSubmitVM = new ExamPaperSubmitVM();
@@ -189,7 +194,9 @@ public class ExamPaperAnswerServiceImpl extends BaseServiceImpl<ExamPaperAnswer>
      * @param now                    now
      * @return ExamPaperQuestionCustomerAnswer
      */
-    private ExamPaperQuestionCustomerAnswer ExamPaperQuestionCustomerAnswerFromVM(Question question, ExamPaperSubmitItemVM customerQuestionAnswer, ExamPaper examPaper, Integer itemOrder, User user, Date now) {
+    private ExamPaperQuestionCustomerAnswer ExamPaperQuestionCustomerAnswerFromVM(Question question, 
+        ExamPaperSubmitItemVM customerQuestionAnswer, ExamPaper examPaper, Integer itemOrder, User user, Date now) {
+
         ExamPaperQuestionCustomerAnswer examPaperQuestionCustomerAnswer = new ExamPaperQuestionCustomerAnswer();
         examPaperQuestionCustomerAnswer.setQuestionId(question.getId());
         examPaperQuestionCustomerAnswer.setExamPaperId(examPaper.getId());
@@ -200,7 +207,7 @@ public class ExamPaperAnswerServiceImpl extends BaseServiceImpl<ExamPaperAnswer>
         examPaperQuestionCustomerAnswer.setCreateUser(user.getId());
         examPaperQuestionCustomerAnswer.setQuestionType(question.getQuestionType());
         examPaperQuestionCustomerAnswer.setQuestionTextContentId(question.getInfoTextContentId());
-        if (null == customerQuestionAnswer) {
+        if (null == customerQuestionAnswer) { //该题答案为空，没填写，那就是0分
             examPaperQuestionCustomerAnswer.setCustomerScore(0);
         } else {
             setSpecialFromVM(examPaperQuestionCustomerAnswer, question, customerQuestionAnswer);
@@ -215,7 +222,9 @@ public class ExamPaperAnswerServiceImpl extends BaseServiceImpl<ExamPaperAnswer>
      * @param question                        question
      * @param customerQuestionAnswer          customerQuestionAnswer
      */
-    private void setSpecialFromVM(ExamPaperQuestionCustomerAnswer examPaperQuestionCustomerAnswer, Question question, ExamPaperSubmitItemVM customerQuestionAnswer) {
+    private void setSpecialFromVM(ExamPaperQuestionCustomerAnswer examPaperQuestionCustomerAnswer, 
+        Question question, ExamPaperSubmitItemVM customerQuestionAnswer) {
+
         QuestionTypeEnum questionTypeEnum = QuestionTypeEnum.fromCode(examPaperQuestionCustomerAnswer.getQuestionType());
         switch (questionTypeEnum) {
             case SingleChoice:
@@ -242,7 +251,9 @@ public class ExamPaperAnswerServiceImpl extends BaseServiceImpl<ExamPaperAnswer>
         }
     }
 
-    private ExamPaperAnswer ExamPaperAnswerFromVM(ExamPaperSubmitVM examPaperSubmitVM, ExamPaper examPaper, List<ExamPaperQuestionCustomerAnswer> examPaperQuestionCustomerAnswers, User user, Date now) {
+    private ExamPaperAnswer ExamPaperAnswerFromVM(ExamPaperSubmitVM examPaperSubmitVM, 
+        ExamPaper examPaper, List<ExamPaperQuestionCustomerAnswer> examPaperQuestionCustomerAnswers, User user, Date now) {
+
         Integer systemScore = examPaperQuestionCustomerAnswers.stream().mapToInt(a -> a.getCustomerScore()).sum();
         long questionCorrect = examPaperQuestionCustomerAnswers.stream().filter(a -> a.getCustomerScore().equals(a.getQuestionScore())).count();
         ExamPaperAnswer examPaperAnswer = new ExamPaperAnswer();

@@ -1,0 +1,73 @@
+2023-05-18 00:32:55.162  INFO 3052 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 3052 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-05-18 00:32:55.162  INFO 3052 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-05-18 00:32:55.209  INFO 3052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-18 00:32:55.209  INFO 3052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-18 00:32:56.826  WARN 3052 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-05-18 00:32:56.857  INFO 3052 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-05-18 00:32:56.857  INFO 3052 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1648 ms
+2023-05-18 00:32:57.788  INFO 3052 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c85c9b4, org.springframework.security.web.context.SecurityContextPersistenceFilter@6585ac84, org.springframework.security.web.header.HeaderWriterFilter@41e94ac9, org.springframework.web.filter.CorsFilter@2f073527, org.springframework.security.web.authentication.logout.LogoutFilter@6d43f515, com.rachel.service.configuration.spring.security.RestLoginAuthenticationFilter@2b1bb91c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3b55b238, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fda14c9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e58d883, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@5b2b5a5a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@eef97ae, org.springframework.security.web.session.SessionManagementFilter@40d8f586, org.springframework.security.web.access.ExceptionTranslationFilter@5c1f11c8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a2031aa]
+2023-05-18 00:32:58.305  INFO 3052 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-18 00:32:58.351  INFO 3052 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-05-18 00:32:58.351  INFO 3052 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-05-18 00:32:58.414  INFO 3052 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-05-18 00:32:58.414  INFO 3052 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 3.822 seconds (JVM running for 5.007)
+2023-05-18 00:33:19.576  INFO 3052 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-18 00:33:19.576  INFO 3052 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-18 00:33:19.583  INFO 3052 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-05-18 00:33:31.411  INFO 3052 --- [XNIO-1 task-102] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-18 00:33:31.531  INFO 3052 --- [XNIO-1 task-102] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-18 00:33:31.539 DEBUG 3052 --- [XNIO-1 task-102] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-05-18 00:33:31.558 DEBUG 3052 --- [XNIO-1 task-102] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin (String)
+2023-05-18 00:33:31.577 DEBUG 3052 --- [XNIO-1 task-102] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-05-18 00:33:32.159 DEBUG 3052 --- [XNIO-1 task-102] r.c.r.s.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2023-05-18 00:33:32.159 DEBUG 3052 --- [XNIO-1 task-102] r.c.r.s.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2023-05-18 00:33:32.160 DEBUG 3052 --- [XNIO-1 task-102] r.c.r.s.r.UserMapper.getUserByUserName   : <==      Total: 1
+2023-05-18 00:33:32.175 DEBUG 3052 --- [XNIO-1 task-102] r.c.r.s.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2023-05-18 00:33:32.178 DEBUG 3052 --- [XNIO-1 task-102] r.c.r.s.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了云计算教务系统(String), 2023-05-18 00:33:32.161(Timestamp)
+2023-05-18 00:33:32.184 DEBUG 3052 --- [XNIO-1 task-102] r.c.r.s.r.U.insertSelective              : <==    Updates: 1
+2023-05-18 00:33:32.261 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2023-05-18 00:33:32.262 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.E.selectAllCount               : ==> Parameters: 
+2023-05-18 00:33:32.267 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.E.selectAllCount               : <==      Total: 1
+2023-05-18 00:33:32.268 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2023-05-18 00:33:32.268 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2023-05-18 00:33:32.270 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2023-05-18 00:33:32.270 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2023-05-18 00:33:32.271 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.E.selectAllCount               : ==> Parameters: 
+2023-05-18 00:33:32.274 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.E.selectAllCount               : <==      Total: 1
+2023-05-18 00:33:32.275 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2023-05-18 00:33:32.276 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.E.selectAllCount               : ==> Parameters: 
+2023-05-18 00:33:32.279 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.E.selectAllCount               : <==      Total: 1
+2023-05-18 00:33:32.286 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2023-05-18 00:33:32.286 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.U.selectCountByDate            : ==> Parameters: 2023-05-01 00:00:00.0(Timestamp), 2023-05-31 23:59:59.0(Timestamp)
+2023-05-18 00:33:32.288 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.U.selectCountByDate            : <==      Total: 1
+2023-05-18 00:33:32.292 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2023-05-18 00:33:32.292 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.E.selectCountByDate            : ==> Parameters: 2023-05-01 00:00:00.0(Timestamp), 2023-05-31 23:59:59.0(Timestamp)
+2023-05-18 00:33:32.294 DEBUG 3052 --- [XNIO-1 task-103] r.c.r.s.r.E.selectCountByDate            : <==      Total: 0
+2023-05-18 00:33:34.609 DEBUG 3052 --- [XNIO-1 task-104] r.c.r.s.r.UserEventLogMapper.page_COUNT  : ==>  Preparing: SELECT count(0) FROM t_user_event_log 
+2023-05-18 00:33:34.609 DEBUG 3052 --- [XNIO-1 task-104] r.c.r.s.r.UserEventLogMapper.page_COUNT  : ==> Parameters: 
+2023-05-18 00:33:34.612 DEBUG 3052 --- [XNIO-1 task-104] r.c.r.s.r.UserEventLogMapper.page_COUNT  : <==      Total: 1
+2023-05-18 00:33:34.615 DEBUG 3052 --- [XNIO-1 task-104] r.c.r.s.r.UserEventLogMapper.page        : ==>  Preparing: SELECT id, user_id, user_name, real_name, content, create_time FROM t_user_event_log order by id desc LIMIT ? 
+2023-05-18 00:33:34.615 DEBUG 3052 --- [XNIO-1 task-104] r.c.r.s.r.UserEventLogMapper.page        : ==> Parameters: 10(Integer)
+2023-05-18 00:33:34.621 DEBUG 3052 --- [XNIO-1 task-104] r.c.r.s.r.UserEventLogMapper.page        : <==      Total: 1
+2023-05-18 00:43:52.465  INFO 3052 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-18 00:43:52.482  INFO 3052 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-18 00:43:52.482  INFO 3052 --- [Thread-15] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-18 17:32:51.672  INFO 19980 --- [restartedMain] com.rachel.service.ServiceApplication    : Starting ServiceApplication on DESKTOP-CVB834G with PID 19980 (D:\software\codes\IDEA\SoftwareEngineering\ExamSys\Service\target\classes started by Summer in D:\software\codes\IDEA\SoftwareEngineering\ExamSys)
+2023-05-18 17:32:51.674  INFO 19980 --- [restartedMain] com.rachel.service.ServiceApplication    : The following profiles are active: dev
+2023-05-18 17:32:51.738  INFO 19980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-18 17:32:51.738  INFO 19980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-18 17:32:53.165  WARN 19980 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-05-18 17:32:53.187  INFO 19980 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-05-18 17:32:53.187  INFO 19980 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1449 ms
+2023-05-18 17:32:53.942  INFO 19980 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-05-18 17:32:54.208  INFO 19980 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 31554a99-3e31-4551-be8e-b605f5d6a624
+
+2023-05-18 17:32:54.295  INFO 19980 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56f6ea5d, org.springframework.security.web.context.SecurityContextPersistenceFilter@56f85ecc, org.springframework.security.web.header.HeaderWriterFilter@4ab9d0d9, org.springframework.security.web.csrf.CsrfFilter@556708f2, org.springframework.security.web.authentication.logout.LogoutFilter@2a4f114a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4eb84860, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@dcbf5c4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3787a755, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@25cb3f0a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d3046bb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2377202b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@505f55f7, org.springframework.security.web.session.SessionManagementFilter@1deec871, org.springframework.security.web.access.ExceptionTranslationFilter@7c0da439, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a8bbc35]
+2023-05-18 17:32:54.643  INFO 19980 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-18 17:32:54.710  INFO 19980 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2023-05-18 17:32:54.719  INFO 19980 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-05-18 17:32:54.783  INFO 19980 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2023-05-18 17:32:54.786  INFO 19980 --- [restartedMain] com.rachel.service.ServiceApplication    : Started ServiceApplication in 3.626 seconds (JVM running for 4.946)
+2023-05-18 17:33:06.461  INFO 19980 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

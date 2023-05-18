@@ -43,6 +43,7 @@ public class TaskExamServiceImpl extends BaseServiceImpl<TaskExam> implements Ta
         this.examPaperMapper = examPaperMapper;
     }
 
+    //任务列表
     @Override
     public PageInfo<TaskExam> page(TaskPageRequestVM requestVM) {
         return PageHelper.startPage(requestVM.getPageIndex(), requestVM.getPageSize(), "id desc").doSelectPageInfo(() ->
@@ -50,12 +51,13 @@ public class TaskExamServiceImpl extends BaseServiceImpl<TaskExam> implements Ta
         );
     }
 
+
     @Override
     @Transactional
     public void edit(TaskRequestVM model, User user) {
         ActionEnum actionEnum = (model.getId() == null) ? ActionEnum.ADD : ActionEnum.UPDATE;
         TaskExam taskExam = null;
-        if (actionEnum == ActionEnum.ADD) {
+        if (actionEnum == ActionEnum.ADD) {  //新加任务
             Date now = new Date();
             taskExam = modelMapper.map(model, TaskExam.class);
             taskExam.setCreateUser(user.getId());
@@ -63,7 +65,7 @@ public class TaskExamServiceImpl extends BaseServiceImpl<TaskExam> implements Ta
             taskExam.setCreateTime(now);
             taskExam.setDeleted(false);
 
-            //保存任务结构
+            //保存任务结构(序列化)
             TextContent textContent = textContentService.jsonConvertInsert(model.getPaperItems(), now, p -> {
                 TaskItemObject taskItemObject = new TaskItemObject();
                 taskItemObject.setExamPaperId(p.getId());
@@ -74,7 +76,7 @@ public class TaskExamServiceImpl extends BaseServiceImpl<TaskExam> implements Ta
             taskExam.setFrameTextContentId(textContent.getId());
             taskExamMapper.insertSelective(taskExam);
 
-        } else {
+        } else {    
             taskExam = taskExamMapper.selectByPrimaryKey(model.getId());
             modelMapper.map(model, taskExam);
 
@@ -103,6 +105,8 @@ public class TaskExamServiceImpl extends BaseServiceImpl<TaskExam> implements Ta
         model.setId(taskExam.getId());
     }
 
+
+    //任务转化VM
     @Override
     public TaskRequestVM taskExamToVM(Integer id) {
         TaskExam taskExam = taskExamMapper.selectByPrimaryKey(id);
@@ -118,6 +122,7 @@ public class TaskExamServiceImpl extends BaseServiceImpl<TaskExam> implements Ta
         return vm;
     }
 
+    //年级查询
     @Override
     public List<TaskExam> getByGradeLevel(Integer gradeLevel) {
         return taskExamMapper.getByGradeLevel(gradeLevel);

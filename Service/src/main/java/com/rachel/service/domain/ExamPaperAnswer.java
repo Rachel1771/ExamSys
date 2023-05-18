@@ -3,6 +3,8 @@ package com.rachel.service.domain;
 import java.io.Serializable;
 import java.util.Date;
 
+
+//考试情况
 public class ExamPaperAnswer implements Serializable {
 
     private static final long serialVersionUID = -2143539181805283910L;

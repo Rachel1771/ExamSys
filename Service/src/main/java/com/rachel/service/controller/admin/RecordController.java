@@ -57,11 +57,20 @@ public class RecordController extends BaseApiController {
     @RequestMapping(value = "/getallrecord",method = RequestMethod.POST)
     @ResponseBody
     public String getAllRecord() {
+//        boolean flag = true;
+//        if(data != null && data.containsKey("flag")){
+//            Object flagValue = data.get("flag");
+//            if(flagValue instanceof Boolean){
+//                flag = (Boolean) flagValue;
+//            }
+//        }
+        Boolean isAllowed = adminService.getStatues();
         int recordId = adminService.getRecordId();
         int realtoken = adminService.getRealToken(recordId);
         List<StudentRecord> records = adminService.getAllRecord();
         Map<String, Object> map = new HashMap<>();
-        map.put("code",realtoken);
+        map.put("isAllowed", isAllowed);
+        map.put("token",realtoken);
         map.put("list", records);
         return new Gson().toJson(map);
     }

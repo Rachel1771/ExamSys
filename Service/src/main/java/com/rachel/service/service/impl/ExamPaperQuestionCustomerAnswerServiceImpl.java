@@ -35,7 +35,7 @@ public class ExamPaperQuestionCustomerAnswerServiceImpl extends BaseServiceImpl<
         this.textContentService = textContentService;
     }
 
-
+    //查询学生的卷页
     @Override
     public PageInfo<ExamPaperQuestionCustomerAnswer> studentPage(QuestionPageStudentRequestVM requestVM) {
         return PageHelper.startPage(requestVM.getPageIndex(), requestVM.getPageSize(), "id desc").doSelectPageInfo(() ->
@@ -47,6 +47,7 @@ public class ExamPaperQuestionCustomerAnswerServiceImpl extends BaseServiceImpl<
     public List<ExamPaperQuestionCustomerAnswer> selectListByPaperAnswerId(Integer id) {
         return examPaperQuestionCustomerAnswerMapper.selectListByPaperAnswerId(id);
     }
+
 
 
     @Override

@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
+//学科
 @RestController("StudentEducationController")
 @RequestMapping(value = "/api/student/education")
 public class EducationController extends BaseApiController {
@@ -28,6 +28,7 @@ public class EducationController extends BaseApiController {
         this.subjectService = subjectService;
     }
 
+    //学科列表
     @RequestMapping(value = "/subject/list", method = RequestMethod.POST)
     public RestResponse<List<SubjectVM>> list() {
         User user = getCurrentUser();
@@ -40,6 +41,8 @@ public class EducationController extends BaseApiController {
         return RestResponse.ok(subjectVMS);
     }
 
+
+    //查询学科
     @RequestMapping(value = "/subject/select/{id}", method = RequestMethod.POST)
     public RestResponse<SubjectEditRequestVM> select(@PathVariable Integer id) {
         Subject subject = subjectService.selectById(id);

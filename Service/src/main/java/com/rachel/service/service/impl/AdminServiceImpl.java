@@ -95,4 +95,15 @@ public class AdminServiceImpl implements AdminService {
         adminMapper.changeEffective(effective,recordId);
     }
 
+    @Override
+    public Boolean getStatues() {
+        int recordId = adminMapper.findRecordId();
+        if(adminMapper.findStatues(recordId).equals("YES")){
+            return true;
+        }
+        else {
+            return  false;
+        }
+    }
+
 }

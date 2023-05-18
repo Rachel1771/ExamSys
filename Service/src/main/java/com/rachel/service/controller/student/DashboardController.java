@@ -44,6 +44,7 @@ public class DashboardController extends BaseApiController {
         this.textContentService = textContentService;
     }
 
+    //装固定试卷和时段试卷进来
     @RequestMapping(value = "/index", method = RequestMethod.POST)
     public RestResponse<IndexVM> index() {
         IndexVM indexVM = new IndexVM();
@@ -70,7 +71,7 @@ public class DashboardController extends BaseApiController {
         return RestResponse.ok(indexVM);
     }
 
-
+    //任务VM的任务数据
     @RequestMapping(value = "/task", method = RequestMethod.POST)
     public RestResponse<List<TaskItemVm>> task() {
         User user = getCurrentUser();
