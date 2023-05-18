@@ -12,7 +12,7 @@
 
 - spring-boot 2.1.6.RELEASE
 - spring-boot-security 
-- undertow web
+- undertow 
 - mysql 
 - mybatis ++
 - hikari 
